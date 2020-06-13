@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InitialProject.DS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,17 @@ namespace InitialProject
                 return;
             }
             errorProvider1.Clear();
+
+            if (!CADUsuario.ValidaUsuario(UsuarioTextBox.Text,ClaveTextBox.Text))
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta", "Posible intruso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                UsuarioTextBox.Text = string.Empty;
+                ClaveTextBox.Text = string.Empty;
+                UsuarioTextBox.Focus();
+                return;
+            }
+
+           
 
 
         }

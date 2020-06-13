@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS\CADUsuario.cs" />
+    <Compile Include="DS\DSAplicacionComercial.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSAplicacionComercial.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DS\DSAplicacionComercial.xsc">
+      <DependentUpon>DSAplicacionComercial.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DSAplicacionComercial.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSAplicacionComercial.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\DSAplicacionComercial.xss">
+      <DependentUpon>DSAplicacionComercial.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,9 +109,7 @@
   <ItemGroup>
     <None Include="Resources\128x128Usuarios.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DS\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\ic_check_circle.png" />
   </ItemGroup>
