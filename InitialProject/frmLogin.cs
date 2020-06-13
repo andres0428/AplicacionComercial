@@ -50,9 +50,10 @@ namespace InitialProject
                 return;
             }
 
-           
 
-
+            frmPrincipal frm = new frmPrincipal();
+            this.Hide();
+            frm.Show();
         }
     }
 }
