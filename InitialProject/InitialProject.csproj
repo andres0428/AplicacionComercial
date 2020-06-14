@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSAll.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\CADCliente.cs" />
     <Compile Include="DS\CADUsuario.cs" />
     <Compile Include="DS\DSAplicacionComercial.Designer.cs">
       <AutoGen>True</AutoGen>

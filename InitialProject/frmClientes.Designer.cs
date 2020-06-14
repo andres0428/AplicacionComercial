@@ -54,11 +54,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.idClienteTextBox = new System.Windows.Forms.TextBox();
+            this.iDClienteTextBox = new System.Windows.Forms.TextBox();
             this.nombreComercialTextBox = new System.Windows.Forms.TextBox();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
-            this.idTipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
+            this.iDTipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
             this.documentoTextBox = new System.Windows.Forms.TextBox();
             this.nombresContactoTextBox = new System.Windows.Forms.TextBox();
             this.apellidosContactoTextBox = new System.Windows.Forms.TextBox();
@@ -66,12 +66,12 @@
             this.telefono2TextBox = new System.Windows.Forms.TextBox();
             this.aniversarioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.notasTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
             this.dSAll = new InitialProject.DSAll.DSAll();
             this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoDocumentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.TipoDocumentoTableAdapter();
             this.clientesToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -309,49 +309,54 @@
             this.label12.TabIndex = 12;
             this.label12.Text = "Notas:";
             // 
-            // idClienteTextBox
+            // iDClienteTextBox
             // 
-            this.idClienteTextBox.Location = new System.Drawing.Point(108, 51);
-            this.idClienteTextBox.Name = "idClienteTextBox";
-            this.idClienteTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idClienteTextBox.TabIndex = 13;
+            this.iDClienteTextBox.Location = new System.Drawing.Point(108, 51);
+            this.iDClienteTextBox.Name = "iDClienteTextBox";
+            this.iDClienteTextBox.ReadOnly = true;
+            this.iDClienteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.iDClienteTextBox.TabIndex = 13;
             // 
             // nombreComercialTextBox
             // 
             this.nombreComercialTextBox.Location = new System.Drawing.Point(108, 82);
             this.nombreComercialTextBox.Name = "nombreComercialTextBox";
-            this.nombreComercialTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreComercialTextBox.ReadOnly = true;
+            this.nombreComercialTextBox.Size = new System.Drawing.Size(128, 20);
             this.nombreComercialTextBox.TabIndex = 14;
             // 
             // direccionTextBox
             // 
             this.direccionTextBox.Location = new System.Drawing.Point(108, 113);
             this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.direccionTextBox.ReadOnly = true;
+            this.direccionTextBox.Size = new System.Drawing.Size(128, 20);
             this.direccionTextBox.TabIndex = 15;
             // 
             // correoTextBox
             // 
             this.correoTextBox.Location = new System.Drawing.Point(108, 144);
             this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.correoTextBox.ReadOnly = true;
+            this.correoTextBox.Size = new System.Drawing.Size(128, 20);
             this.correoTextBox.TabIndex = 16;
             // 
-            // idTipoDocumentoComboBox
+            // iDTipoDocumentoComboBox
             // 
-            this.idTipoDocumentoComboBox.DataSource = this.tipoDocumentoBindingSource;
-            this.idTipoDocumentoComboBox.DisplayMember = "Descripcion";
-            this.idTipoDocumentoComboBox.FormattingEnabled = true;
-            this.idTipoDocumentoComboBox.Location = new System.Drawing.Point(348, 51);
-            this.idTipoDocumentoComboBox.Name = "idTipoDocumentoComboBox";
-            this.idTipoDocumentoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.idTipoDocumentoComboBox.TabIndex = 17;
-            this.idTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
+            this.iDTipoDocumentoComboBox.DataSource = this.tipoDocumentoBindingSource;
+            this.iDTipoDocumentoComboBox.DisplayMember = "Descripcion";
+            this.iDTipoDocumentoComboBox.FormattingEnabled = true;
+            this.iDTipoDocumentoComboBox.Location = new System.Drawing.Point(348, 51);
+            this.iDTipoDocumentoComboBox.Name = "iDTipoDocumentoComboBox";
+            this.iDTipoDocumentoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.iDTipoDocumentoComboBox.TabIndex = 17;
+            this.iDTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
             // 
             // documentoTextBox
             // 
             this.documentoTextBox.Location = new System.Drawing.Point(583, 50);
             this.documentoTextBox.Name = "documentoTextBox";
+            this.documentoTextBox.ReadOnly = true;
             this.documentoTextBox.Size = new System.Drawing.Size(100, 20);
             this.documentoTextBox.TabIndex = 18;
             // 
@@ -359,6 +364,7 @@
             // 
             this.nombresContactoTextBox.Location = new System.Drawing.Point(348, 84);
             this.nombresContactoTextBox.Name = "nombresContactoTextBox";
+            this.nombresContactoTextBox.ReadOnly = true;
             this.nombresContactoTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombresContactoTextBox.TabIndex = 19;
             // 
@@ -366,6 +372,7 @@
             // 
             this.apellidosContactoTextBox.Location = new System.Drawing.Point(583, 83);
             this.apellidosContactoTextBox.Name = "apellidosContactoTextBox";
+            this.apellidosContactoTextBox.ReadOnly = true;
             this.apellidosContactoTextBox.Size = new System.Drawing.Size(100, 20);
             this.apellidosContactoTextBox.TabIndex = 20;
             // 
@@ -373,6 +380,7 @@
             // 
             this.telefono1TextBox.Location = new System.Drawing.Point(348, 117);
             this.telefono1TextBox.Name = "telefono1TextBox";
+            this.telefono1TextBox.ReadOnly = true;
             this.telefono1TextBox.Size = new System.Drawing.Size(100, 20);
             this.telefono1TextBox.TabIndex = 21;
             // 
@@ -380,6 +388,7 @@
             // 
             this.telefono2TextBox.Location = new System.Drawing.Point(583, 115);
             this.telefono2TextBox.Name = "telefono2TextBox";
+            this.telefono2TextBox.ReadOnly = true;
             this.telefono2TextBox.Size = new System.Drawing.Size(100, 20);
             this.telefono2TextBox.TabIndex = 22;
             // 
@@ -392,20 +401,28 @@
             // 
             // notasTextBox
             // 
+            this.notasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.notasTextBox.Location = new System.Drawing.Point(108, 181);
             this.notasTextBox.Multiline = true;
             this.notasTextBox.Name = "notasTextBox";
+            this.notasTextBox.ReadOnly = true;
             this.notasTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.notasTextBox.Size = new System.Drawing.Size(575, 44);
             this.notasTextBox.TabIndex = 24;
             // 
-            // dataGridView1
+            // clienteDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(808, 188);
-            this.dataGridView1.TabIndex = 25;
+            this.clienteDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clienteDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clienteDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clienteDataGridView.Location = new System.Drawing.Point(0, 247);
+            this.clienteDataGridView.Name = "clienteDataGridView";
+            this.clienteDataGridView.Size = new System.Drawing.Size(808, 188);
+            this.clienteDataGridView.TabIndex = 25;
             // 
             // dSAll
             // 
@@ -426,7 +443,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.notasTextBox);
             this.Controls.Add(this.aniversarioDateTimePicker);
             this.Controls.Add(this.telefono2TextBox);
@@ -434,11 +451,11 @@
             this.Controls.Add(this.apellidosContactoTextBox);
             this.Controls.Add(this.nombresContactoTextBox);
             this.Controls.Add(this.documentoTextBox);
-            this.Controls.Add(this.idTipoDocumentoComboBox);
+            this.Controls.Add(this.iDTipoDocumentoComboBox);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(this.nombreComercialTextBox);
-            this.Controls.Add(this.idClienteTextBox);
+            this.Controls.Add(this.iDClienteTextBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -458,7 +475,7 @@
             this.Load += new System.EventHandler(this.frmClientes_Load);
             this.clientesToolStrip.ResumeLayout(false);
             this.clientesToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -492,11 +509,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox idClienteTextBox;
+        private System.Windows.Forms.TextBox iDClienteTextBox;
         private System.Windows.Forms.TextBox nombreComercialTextBox;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.TextBox correoTextBox;
-        private System.Windows.Forms.ComboBox idTipoDocumentoComboBox;
+        private System.Windows.Forms.ComboBox iDTipoDocumentoComboBox;
         private System.Windows.Forms.TextBox documentoTextBox;
         private System.Windows.Forms.TextBox nombresContactoTextBox;
         private System.Windows.Forms.TextBox apellidosContactoTextBox;
@@ -504,7 +521,7 @@
         private System.Windows.Forms.TextBox telefono2TextBox;
         private System.Windows.Forms.DateTimePicker aniversarioDateTimePicker;
         private System.Windows.Forms.TextBox notasTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView clienteDataGridView;
         private DSAll.DSAll dSAll;
         private System.Windows.Forms.BindingSource tipoDocumentoBindingSource;
         private DSAll.DSAllTableAdapters.TipoDocumentoTableAdapter tipoDocumentoTableAdapter;
