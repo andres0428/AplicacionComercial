@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,10 +37,10 @@
             this.ClaveTextBox = new System.Windows.Forms.TextBox();
             this.SalirButton = new System.Windows.Forms.Button();
             this.AceptarButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,6 +79,7 @@
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsuarioTextBox.TabIndex = 3;
+            this.UsuarioTextBox.Text = "JAE";
             // 
             // ClaveTextBox
             // 
@@ -86,6 +88,7 @@
             this.ClaveTextBox.PasswordChar = '*';
             this.ClaveTextBox.Size = new System.Drawing.Size(100, 20);
             this.ClaveTextBox.TabIndex = 4;
+            this.ClaveTextBox.Text = "123";
             // 
             // SalirButton
             // 
@@ -94,7 +97,7 @@
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(75, 23);
             this.SalirButton.TabIndex = 7;
-            this.SalirButton.Text = "SALIR";
+            this.SalirButton.Text = "Salir";
             this.SalirButton.UseVisualStyleBackColor = true;
             this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
@@ -104,10 +107,14 @@
             this.AceptarButton.Location = new System.Drawing.Point(116, 250);
             this.AceptarButton.Name = "AceptarButton";
             this.AceptarButton.Size = new System.Drawing.Size(76, 23);
-            this.AceptarButton.TabIndex = 6;
+            this.AceptarButton.TabIndex = 7;
             this.AceptarButton.Text = "Aceptar";
             this.AceptarButton.UseVisualStyleBackColor = true;
             this.AceptarButton.Click += new System.EventHandler(this.AceptarButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // pictureBox1
             // 
@@ -118,10 +125,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // frmLogin
             // 
@@ -140,10 +143,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
