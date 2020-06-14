@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSAll\DSAll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSAll.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\CADUsuario.cs" />
     <Compile Include="DS\DSAplicacionComercial.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -91,6 +96,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DSAll\DSAll.xsc">
+      <DependentUpon>DSAll.xsd</DependentUpon>
+    </None>
+    <None Include="DSAll\DSAll.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSAll.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSAll\DSAll.xss">
+      <DependentUpon>DSAll.xsd</DependentUpon>
+    </None>
     <None Include="DS\DSAplicacionComercial.xsc">
       <DependentUpon>DSAplicacionComercial.xsd</DependentUpon>
     </None>
