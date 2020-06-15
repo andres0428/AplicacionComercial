@@ -181,6 +181,7 @@
             // GuardarToolStripButton8
             // 
             this.GuardarToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.GuardarToolStripButton8.Enabled = false;
             this.GuardarToolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("GuardarToolStripButton8.Image")));
             this.GuardarToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GuardarToolStripButton8.Name = "GuardarToolStripButton8";
@@ -192,6 +193,7 @@
             // CancelarToolStripButton9
             // 
             this.CancelarToolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CancelarToolStripButton9.Enabled = false;
             this.CancelarToolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("CancelarToolStripButton9.Image")));
             this.CancelarToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CancelarToolStripButton9.Name = "CancelarToolStripButton9";
@@ -355,6 +357,7 @@
             // 
             this.iDTipoDocumentoComboBox.DataSource = this.tipoDocumentoBindingSource;
             this.iDTipoDocumentoComboBox.DisplayMember = "Descripcion";
+            this.iDTipoDocumentoComboBox.Enabled = false;
             this.iDTipoDocumentoComboBox.FormattingEnabled = true;
             this.iDTipoDocumentoComboBox.Location = new System.Drawing.Point(348, 51);
             this.iDTipoDocumentoComboBox.Name = "iDTipoDocumentoComboBox";
@@ -414,6 +417,7 @@
             // 
             // aniversarioDateTimePicker
             // 
+            this.aniversarioDateTimePicker.Enabled = false;
             this.aniversarioDateTimePicker.Location = new System.Drawing.Point(348, 150);
             this.aniversarioDateTimePicker.Name = "aniversarioDateTimePicker";
             this.aniversarioDateTimePicker.Size = new System.Drawing.Size(200, 20);
