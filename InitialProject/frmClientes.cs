@@ -30,6 +30,8 @@ namespace InitialProject
 
         private void MostrarRegistros()
         {
+            if (clienteDataGridView.Rows.Count == 0) return;
+
             iDClienteTextBox.Text = clienteDataGridView.Rows[i].Cells["IDCliente"].Value.ToString();
             documentoTextBox.Text = clienteDataGridView.Rows[i].Cells["Documento"].Value.ToString();
             nombreComercialTextBox.Text = clienteDataGridView.Rows[i].Cells["NombreComercial"].Value.ToString();
@@ -41,7 +43,72 @@ namespace InitialProject
             correoTextBox.Text = clienteDataGridView.Rows[i].Cells["Correo"].Value.ToString();
             notasTextBox.Text = clienteDataGridView.Rows[i].Cells["Notas"].Value.ToString();            
             iDTipoDocumentoComboBox.SelectedValue = clienteDataGridView.Rows[i].Cells["IDTipoDocumento"].Value;
-            aniversarioDateTimePicker.Value = Convert.ToDateTime (clienteDataGridView.Rows[i].Cells["Aniversario"].Value);
+            try
+            {
+                aniversarioDateTimePicker.Value = Convert.ToDateTime(clienteDataGridView.Rows[i].Cells["Aniversario"].Value);
+            }
+            catch (Exception)
+            {
+                aniversarioDateTimePicker.Value = DateTime.Now;                
+            }
         }
+
+        private void PrimerToolStripButton_Click(object sender, EventArgs e)
+        {
+            i = 0;
+            MostrarRegistros();
+        }
+
+        private void AnteriorToolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (i == 0) return;
+            i--;
+            MostrarRegistros();
+        }
+
+        private void SiguienteToolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (i >= clienteDataGridView.Rows.Count - 1) return;
+            i++;
+            MostrarRegistros();
+        }
+
+        private void UltimoToolStripButton4_Click(object sender, EventArgs e)
+        {
+            i = clienteDataGridView.Rows.Count - 1;
+            MostrarRegistros();
+        }
+
+        private void ModificarToolStripButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuevoToolStripButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BorrarToolStripButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GuardarToolStripButton8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelarToolStripButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscarToolStripButton10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //***************************************** METODOS ***************************************************
     }
 }

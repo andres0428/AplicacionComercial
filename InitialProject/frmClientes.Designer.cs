@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             this.clientesToolStrip = new System.Windows.Forms.ToolStrip();
-            this.PrimeroIzquierdaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.SiguienteIzquierdaToolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.SiguienteDerechaToolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.PrimeroDerechaToolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.PrimerToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.AnteriorToolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.SiguienteToolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.UltimoToolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ModificarToolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.NuevoToolStripButton6 = new System.Windows.Forms.ToolStripButton();
@@ -59,6 +59,8 @@
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.iDTipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
+            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAll = new InitialProject.DSAll.DSAll();
             this.documentoTextBox = new System.Windows.Forms.TextBox();
             this.nombresContactoTextBox = new System.Windows.Forms.TextBox();
             this.apellidosContactoTextBox = new System.Windows.Forms.TextBox();
@@ -67,22 +69,20 @@
             this.aniversarioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.dSAll = new InitialProject.DSAll.DSAll();
-            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoDocumentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.TipoDocumentoTableAdapter();
             this.clientesToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // clientesToolStrip
             // 
             this.clientesToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PrimeroIzquierdaToolStripButton,
-            this.SiguienteIzquierdaToolStripButton2,
-            this.SiguienteDerechaToolStripButton3,
-            this.PrimeroDerechaToolStripButton4,
+            this.PrimerToolStripButton,
+            this.AnteriorToolStripButton2,
+            this.SiguienteToolStripButton3,
+            this.UltimoToolStripButton4,
             this.toolStripSeparator1,
             this.ModificarToolStripButton5,
             this.NuevoToolStripButton6,
@@ -96,45 +96,49 @@
             this.clientesToolStrip.TabIndex = 0;
             this.clientesToolStrip.Text = "toolStrip1";
             // 
-            // PrimeroIzquierdaToolStripButton
+            // PrimerToolStripButton
             // 
-            this.PrimeroIzquierdaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PrimeroIzquierdaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("PrimeroIzquierdaToolStripButton.Image")));
-            this.PrimeroIzquierdaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PrimeroIzquierdaToolStripButton.Name = "PrimeroIzquierdaToolStripButton";
-            this.PrimeroIzquierdaToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.PrimeroIzquierdaToolStripButton.Text = "toolStripButton1";
-            this.PrimeroIzquierdaToolStripButton.ToolTipText = "Primer Registro";
+            this.PrimerToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PrimerToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("PrimerToolStripButton.Image")));
+            this.PrimerToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PrimerToolStripButton.Name = "PrimerToolStripButton";
+            this.PrimerToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.PrimerToolStripButton.Text = "toolStripButton1";
+            this.PrimerToolStripButton.ToolTipText = "Primer Registro";
+            this.PrimerToolStripButton.Click += new System.EventHandler(this.PrimerToolStripButton_Click);
             // 
-            // SiguienteIzquierdaToolStripButton2
+            // AnteriorToolStripButton2
             // 
-            this.SiguienteIzquierdaToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SiguienteIzquierdaToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("SiguienteIzquierdaToolStripButton2.Image")));
-            this.SiguienteIzquierdaToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SiguienteIzquierdaToolStripButton2.Name = "SiguienteIzquierdaToolStripButton2";
-            this.SiguienteIzquierdaToolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.SiguienteIzquierdaToolStripButton2.Text = "toolStripButton2";
-            this.SiguienteIzquierdaToolStripButton2.ToolTipText = "Anterior Registro";
+            this.AnteriorToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AnteriorToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("AnteriorToolStripButton2.Image")));
+            this.AnteriorToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AnteriorToolStripButton2.Name = "AnteriorToolStripButton2";
+            this.AnteriorToolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.AnteriorToolStripButton2.Text = "toolStripButton2";
+            this.AnteriorToolStripButton2.ToolTipText = "Anterior Registro";
+            this.AnteriorToolStripButton2.Click += new System.EventHandler(this.AnteriorToolStripButton2_Click);
             // 
-            // SiguienteDerechaToolStripButton3
+            // SiguienteToolStripButton3
             // 
-            this.SiguienteDerechaToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SiguienteDerechaToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("SiguienteDerechaToolStripButton3.Image")));
-            this.SiguienteDerechaToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SiguienteDerechaToolStripButton3.Name = "SiguienteDerechaToolStripButton3";
-            this.SiguienteDerechaToolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.SiguienteDerechaToolStripButton3.Text = "toolStripButton3";
-            this.SiguienteDerechaToolStripButton3.ToolTipText = "Siguiente Registro";
+            this.SiguienteToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SiguienteToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("SiguienteToolStripButton3.Image")));
+            this.SiguienteToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SiguienteToolStripButton3.Name = "SiguienteToolStripButton3";
+            this.SiguienteToolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.SiguienteToolStripButton3.Text = "toolStripButton3";
+            this.SiguienteToolStripButton3.ToolTipText = "Siguiente Registro";
+            this.SiguienteToolStripButton3.Click += new System.EventHandler(this.SiguienteToolStripButton3_Click);
             // 
-            // PrimeroDerechaToolStripButton4
+            // UltimoToolStripButton4
             // 
-            this.PrimeroDerechaToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PrimeroDerechaToolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("PrimeroDerechaToolStripButton4.Image")));
-            this.PrimeroDerechaToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PrimeroDerechaToolStripButton4.Name = "PrimeroDerechaToolStripButton4";
-            this.PrimeroDerechaToolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.PrimeroDerechaToolStripButton4.Text = "toolStripButton4";
-            this.PrimeroDerechaToolStripButton4.ToolTipText = "Ultimo registro";
+            this.UltimoToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UltimoToolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("UltimoToolStripButton4.Image")));
+            this.UltimoToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UltimoToolStripButton4.Name = "UltimoToolStripButton4";
+            this.UltimoToolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.UltimoToolStripButton4.Text = "toolStripButton4";
+            this.UltimoToolStripButton4.ToolTipText = "Ultimo registro";
+            this.UltimoToolStripButton4.Click += new System.EventHandler(this.UltimoToolStripButton4_Click);
             // 
             // toolStripSeparator1
             // 
@@ -150,6 +154,7 @@
             this.ModificarToolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.ModificarToolStripButton5.Text = "toolStripButton5";
             this.ModificarToolStripButton5.ToolTipText = "Editar Registro";
+            this.ModificarToolStripButton5.Click += new System.EventHandler(this.ModificarToolStripButton5_Click);
             // 
             // NuevoToolStripButton6
             // 
@@ -160,6 +165,7 @@
             this.NuevoToolStripButton6.Size = new System.Drawing.Size(23, 22);
             this.NuevoToolStripButton6.Text = "toolStripButton6";
             this.NuevoToolStripButton6.ToolTipText = "Agregar Registro";
+            this.NuevoToolStripButton6.Click += new System.EventHandler(this.NuevoToolStripButton6_Click);
             // 
             // BorrarToolStripButton7
             // 
@@ -170,6 +176,7 @@
             this.BorrarToolStripButton7.Size = new System.Drawing.Size(23, 22);
             this.BorrarToolStripButton7.Text = "toolStripButton7";
             this.BorrarToolStripButton7.ToolTipText = "Eliminar Registro";
+            this.BorrarToolStripButton7.Click += new System.EventHandler(this.BorrarToolStripButton7_Click);
             // 
             // GuardarToolStripButton8
             // 
@@ -180,6 +187,7 @@
             this.GuardarToolStripButton8.Size = new System.Drawing.Size(23, 22);
             this.GuardarToolStripButton8.Text = "toolStripButton8";
             this.GuardarToolStripButton8.ToolTipText = "Guardar Registro";
+            this.GuardarToolStripButton8.Click += new System.EventHandler(this.GuardarToolStripButton8_Click);
             // 
             // CancelarToolStripButton9
             // 
@@ -190,6 +198,7 @@
             this.CancelarToolStripButton9.Size = new System.Drawing.Size(23, 22);
             this.CancelarToolStripButton9.Text = "toolStripButton9";
             this.CancelarToolStripButton9.ToolTipText = "Cancelar Acción";
+            this.CancelarToolStripButton9.Click += new System.EventHandler(this.CancelarToolStripButton9_Click);
             // 
             // BuscarToolStripButton10
             // 
@@ -200,6 +209,7 @@
             this.BuscarToolStripButton10.Size = new System.Drawing.Size(23, 22);
             this.BuscarToolStripButton10.Text = "toolStripButton10";
             this.BuscarToolStripButton10.ToolTipText = "Buscar";
+            this.BuscarToolStripButton10.Click += new System.EventHandler(this.BuscarToolStripButton10_Click);
             // 
             // label1
             // 
@@ -352,6 +362,16 @@
             this.iDTipoDocumentoComboBox.TabIndex = 17;
             this.iDTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
             // 
+            // tipoDocumentoBindingSource
+            // 
+            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
+            this.tipoDocumentoBindingSource.DataSource = this.dSAll;
+            // 
+            // dSAll
+            // 
+            this.dSAll.DataSetName = "DSAll";
+            this.dSAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // documentoTextBox
             // 
             this.documentoTextBox.Location = new System.Drawing.Point(583, 50);
@@ -424,16 +444,6 @@
             this.clienteDataGridView.Size = new System.Drawing.Size(808, 188);
             this.clienteDataGridView.TabIndex = 25;
             // 
-            // dSAll
-            // 
-            this.dSAll.DataSetName = "DSAll";
-            this.dSAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoDocumentoBindingSource
-            // 
-            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
-            this.tipoDocumentoBindingSource.DataSource = this.dSAll;
-            // 
             // tipoDocumentoTableAdapter
             // 
             this.tipoDocumentoTableAdapter.ClearBeforeFill = true;
@@ -475,9 +485,9 @@
             this.Load += new System.EventHandler(this.frmClientes_Load);
             this.clientesToolStrip.ResumeLayout(false);
             this.clientesToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,10 +496,10 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip clientesToolStrip;
-        private System.Windows.Forms.ToolStripButton PrimeroIzquierdaToolStripButton;
-        private System.Windows.Forms.ToolStripButton SiguienteIzquierdaToolStripButton2;
-        private System.Windows.Forms.ToolStripButton SiguienteDerechaToolStripButton3;
-        private System.Windows.Forms.ToolStripButton PrimeroDerechaToolStripButton4;
+        private System.Windows.Forms.ToolStripButton PrimerToolStripButton;
+        private System.Windows.Forms.ToolStripButton AnteriorToolStripButton2;
+        private System.Windows.Forms.ToolStripButton SiguienteToolStripButton3;
+        private System.Windows.Forms.ToolStripButton UltimoToolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton ModificarToolStripButton5;
         private System.Windows.Forms.ToolStripButton NuevoToolStripButton6;
