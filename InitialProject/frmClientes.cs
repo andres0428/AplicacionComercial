@@ -84,10 +84,24 @@ namespace InitialProject
             HabilitarCampos();
             nuevo = false;
         }
+        private void NuevoToolStripButton_Click(object sender, EventArgs e)
+        {
+            HabilitarCampos();
+            LimpiarCampos();
+            nuevo = true;
+        }
 
         private void BorrarToolStripButton_Click(object sender, EventArgs e)
         {
-
+            DialogResult rta = MessageBox.Show("Estas seguro de borrar el registro actual?","Confirmación",
+                                                MessageBoxButtons.YesNo,MessageBoxIcon.Question,
+                                                MessageBoxDefaultButton.Button1);
+            if (rta == DialogResult.No) return; ;
+            CADCliente.DeleteClientes(Convert.ToInt32(iDClienteTextBox.Text));
+            clienteDataGridView.DataSource = null;
+            clienteDataGridView.DataSource = CADCliente.GetData();
+            if (i != 0) i--;
+            MostrarRagistro();
         }
 
         private void GuardarToolStripButton_Click(object sender, EventArgs e)
@@ -158,7 +172,7 @@ namespace InitialProject
             BuscarToolStripButton.Enabled = false;
 
             //campos texbox
-            //iDClienteTextBox.ReadOnly = false;
+            //iDClienteTextBox.ReadOnly = true;
             documentoTextBox.ReadOnly = false;
             nombreComercialTextBox.ReadOnly = false;
             nombresContactoTextBox.ReadOnly = false;
@@ -168,14 +182,13 @@ namespace InitialProject
             telefono2TextBox.ReadOnly = false;
             correoTextBox.ReadOnly = false;
             notasTextBox.ReadOnly = false;
-            //iDTipoDocumentoComboBox.Enabled = true;
+            iDTipoDocumentoComboBox.Enabled = true;
             aniversarioDateTimePicker.Enabled = true;
-            //iDTipoDocumentoComboBox.Focus();
+            iDTipoDocumentoComboBox.Focus();
         }
 
         private void LimpiarCampos()
-        {
-            iDClienteTextBox.Text = string.Empty;
+        {            
             iDClienteTextBox.Text = string.Empty;
             documentoTextBox.Text = string.Empty;
             nombresContactoTextBox.Text = string.Empty;
@@ -310,6 +323,6 @@ namespace InitialProject
             return true;
 
         }
-
+        
     }
 }
