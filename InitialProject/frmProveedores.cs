@@ -27,6 +27,8 @@ namespace InitialProject
 
         private void frmProveedores_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dSAll.TipoDocumento' table. You can move, or remove it, as needed.
+            this.tipoDocumentoTableAdapter.Fill(this.dSAll.TipoDocumento);
             // TODO: This line of code loads data into the 'dSAplicacionComercial.Proveedor' table. You can move, or remove it, as needed.
             this.proveedorTableAdapter.Fill(this.dSAplicacionComercial.Proveedor);
 
