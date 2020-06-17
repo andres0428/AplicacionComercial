@@ -33,5 +33,12 @@ namespace InitialProject
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void provedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProveedores frm = new frmProveedores();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

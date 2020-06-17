@@ -108,7 +108,8 @@
             // 
             this.provedoresToolStripMenuItem.Name = "provedoresToolStripMenuItem";
             this.provedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.provedoresToolStripMenuItem.Text = "P&rovedores";
+            this.provedoresToolStripMenuItem.Text = "P&roveedores";
+            this.provedoresToolStripMenuItem.Click += new System.EventHandler(this.provedoresToolStripMenuItem_Click);
             // 
             // tipoDocumentoToolStripMenuItem
             // 
