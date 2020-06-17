@@ -31,23 +31,5 @@ namespace InitialProject
             this.proveedorTableAdapter.Fill(this.dSAplicacionComercial.Proveedor);
 
         }
-
-        private void editItemBindingNavigator_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addNewItemBindingNavigator_Click(object sender, EventArgs e)
-        {
-            //HabilitarCampos();
-            proveedorBindingSource.AddNew();
-            nombresContactoTextBox.Focus();
-
-
-        }
-
-
-        // *********** metodos ****************
-
     }
 }
