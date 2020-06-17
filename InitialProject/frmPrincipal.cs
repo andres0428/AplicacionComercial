@@ -40,5 +40,10 @@ namespace InitialProject
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
