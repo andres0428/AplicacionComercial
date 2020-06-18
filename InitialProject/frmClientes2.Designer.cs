@@ -88,6 +88,9 @@
             this.modifierItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.cancelItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.searchItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
+            this.dSAll = new InitialProject.DSAll.DSAll();
+            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoDocumentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.TipoDocumentoTableAdapter();
             iDClienteLabel = new System.Windows.Forms.Label();
             iDTipoDocumentoLabel = new System.Windows.Forms.Label();
             documentoLabel = new System.Windows.Forms.Label();
@@ -106,6 +109,8 @@
             this.clienteBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iDClienteLabel
@@ -499,13 +504,15 @@
             // 
             // iDTipoDocumentoComboBox
             // 
-            this.iDTipoDocumentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "IDTipoDocumento", true));
-            this.iDTipoDocumentoComboBox.Enabled = false;
+            this.iDTipoDocumentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clienteBindingSource, "IDTipoDocumento", true));
+            this.iDTipoDocumentoComboBox.DataSource = this.tipoDocumentoBindingSource;
+            this.iDTipoDocumentoComboBox.DisplayMember = "Descripcion";
             this.iDTipoDocumentoComboBox.FormattingEnabled = true;
             this.iDTipoDocumentoComboBox.Location = new System.Drawing.Point(344, 38);
             this.iDTipoDocumentoComboBox.Name = "iDTipoDocumentoComboBox";
             this.iDTipoDocumentoComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDTipoDocumentoComboBox.TabIndex = 4;
+            this.iDTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
             // 
             // documentoTextBox
             // 
@@ -582,7 +589,6 @@
             // aniversarioDateTimePicker
             // 
             this.aniversarioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "Aniversario", true));
-            this.aniversarioDateTimePicker.Enabled = false;
             this.aniversarioDateTimePicker.Location = new System.Drawing.Point(344, 141);
             this.aniversarioDateTimePicker.Name = "aniversarioDateTimePicker";
             this.aniversarioDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -632,6 +638,20 @@
             this.searchItemBindingNavigator.Text = "Search";
             this.searchItemBindingNavigator.Click += new System.EventHandler(this.searchItemBindingNavigator_Click);
             // 
+            // dSAll
+            // 
+            this.dSAll.DataSetName = "DSAll";
+            this.dSAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipoDocumentoBindingSource
+            // 
+            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
+            this.tipoDocumentoBindingSource.DataSource = this.dSAll;
+            // 
+            // tipoDocumentoTableAdapter
+            // 
+            this.tipoDocumentoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmClientes2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,6 +694,8 @@
             this.clienteBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,5 +749,8 @@
         private System.Windows.Forms.ToolStripButton modifierItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton cancelItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton searchItemBindingNavigator;
+        private DSAll.DSAll dSAll;
+        private System.Windows.Forms.BindingSource tipoDocumentoBindingSource;
+        private DSAll.DSAllTableAdapters.TipoDocumentoTableAdapter tipoDocumentoTableAdapter;
     }
 }
