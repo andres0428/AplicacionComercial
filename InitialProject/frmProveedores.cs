@@ -159,14 +159,6 @@ namespace InitialProject
 
         private bool validaCampos()
         {
-            if (nombreTextBox.Text == string.Empty)
-            {
-                errorProvider1.SetError(nombreTextBox, "Debes ingresar un nombre");
-                nombreTextBox.Focus();
-                return false;
-            }
-            errorProvider1.Clear();
-
             if (iDTipoDocumentoComboBox.SelectedIndex == -1)
             {
                 errorProvider1.SetError(iDTipoDocumentoComboBox, "Debes ingresar in tipo de documento");
@@ -177,7 +169,7 @@ namespace InitialProject
 
             if (documentoTextBox.Text == string.Empty)
             {
-                errorProvider1.SetError(documentoTextBox, "Debes ingresar un nombre");
+                errorProvider1.SetError(documentoTextBox, "Debes ingresar in tipo de documento");
                 documentoTextBox.Focus();
                 return false;
             }
@@ -199,17 +191,38 @@ namespace InitialProject
             }
             errorProvider1.Clear();
 
-            //if (correoTextBox.Text == string.Empty)
-            //{
-            //    RegexUtilities regexUtilities = new RegexUtilities();
-            //    if (!regexUtilities.IsValidEmail(correoTextBox.Text))
-            //    {
-            //        errorProvider1.SetError(correoTextBox, "Ingresa correo valido");
-            //        correoTextBox.Focus();
-            //        return false;
-            //    }
-            //    errorProvider1.Clear();
-            //}
+
+            if (nombreTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(nombreTextBox, "Debes ingresar un nombre");
+                nombreTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            
+
+            if (documentoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(documentoTextBox, "Debes ingresar un nombre");
+                documentoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            
+
+            if (correoTextBox.Text != string.Empty)
+            {
+                RegexUtilities regexUtilities = new RegexUtilities();
+                if (!regexUtilities.IsValidEmail(correoTextBox.Text))
+                {
+                    errorProvider1.SetError(correoTextBox, "Ingresa correo valido");
+                    correoTextBox.Focus();
+                    return false;
+                }
+                errorProvider1.Clear();
+            }
             return true;
 
         }

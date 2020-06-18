@@ -79,7 +79,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -355,7 +355,6 @@
             // deleteItemBindingNavigator
             // 
             this.deleteItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.deleteItemBindingNavigator.Enabled = false;
             this.deleteItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("deleteItemBindingNavigator.Image")));
             this.deleteItemBindingNavigator.Name = "deleteItemBindingNavigator";
             this.deleteItemBindingNavigator.RightToLeftAutoMirrorImage = true;
@@ -376,6 +375,7 @@
             // cancelItemBindingNavigator
             // 
             this.cancelItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cancelItemBindingNavigator.Enabled = false;
             this.cancelItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("cancelItemBindingNavigator.Image")));
             this.cancelItemBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cancelItemBindingNavigator.Name = "cancelItemBindingNavigator";
@@ -398,6 +398,9 @@
             this.proveedorDataGridView.AllowUserToAddRows = false;
             this.proveedorDataGridView.AllowUserToDeleteRows = false;
             this.proveedorDataGridView.AllowUserToOrderColumns = true;
+            this.proveedorDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.proveedorDataGridView.AutoGenerateColumns = false;
             this.proveedorDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.proveedorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -417,7 +420,7 @@
             this.proveedorDataGridView.Location = new System.Drawing.Point(0, 228);
             this.proveedorDataGridView.Name = "proveedorDataGridView";
             this.proveedorDataGridView.ReadOnly = true;
-            this.proveedorDataGridView.Size = new System.Drawing.Size(953, 252);
+            this.proveedorDataGridView.Size = new System.Drawing.Size(973, 271);
             this.proveedorDataGridView.TabIndex = 23;
             // 
             // iDProveedorTextBox
@@ -562,14 +565,10 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "IDTipoDocumento";
-            this.dataGridViewTextBoxColumn3.DataSource = this.tipoDocumentoBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "Descripcion";
             this.dataGridViewTextBoxColumn3.HeaderText = "ID Tipo Documento";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "IDTipoDocumento";
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -714,7 +713,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
