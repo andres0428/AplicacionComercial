@@ -29,7 +29,7 @@ namespace InitialProject
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmClientes frm = new frmClientes();
+            frmClientes2 frm = new frmClientes2();
             frm.MdiParent = this;
             frm.Show();
         }

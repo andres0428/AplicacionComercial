@@ -32,6 +32,49 @@ namespace InitialProject
 
         }
 
-       
+        private void firstItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void previousItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nextItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modifierItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addNewItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

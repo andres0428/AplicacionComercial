@@ -281,6 +281,7 @@
             this.addNewItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.addNewItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.addNewItemBindingNavigator.Text = "Add new";
+            this.addNewItemBindingNavigator.Click += new System.EventHandler(this.addNewItemBindingNavigator_Click);
             // 
             // countItemBindingNavigator
             // 
@@ -297,6 +298,7 @@
             this.deleteItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.deleteItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.deleteItemBindingNavigator.Text = "Delete";
+            this.deleteItemBindingNavigator.Click += new System.EventHandler(this.deleteItemBindingNavigator_Click);
             // 
             // firstItemBindingNavigator
             // 
@@ -306,6 +308,7 @@
             this.firstItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.firstItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.firstItemBindingNavigator.Text = "Move first";
+            this.firstItemBindingNavigator.Click += new System.EventHandler(this.firstItemBindingNavigator_Click);
             // 
             // previousItemBindingNavigator
             // 
@@ -315,6 +318,7 @@
             this.previousItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.previousItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.previousItemBindingNavigator.Text = "Move previous";
+            this.previousItemBindingNavigator.Click += new System.EventHandler(this.previousItemBindingNavigator_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -343,6 +347,7 @@
             this.nextItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.nextItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.nextItemBindingNavigator.Text = "Move next";
+            this.nextItemBindingNavigator.Click += new System.EventHandler(this.nextItemBindingNavigator_Click);
             // 
             // lastItemBindingNavigator
             // 
@@ -352,6 +357,7 @@
             this.lastItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.lastItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.lastItemBindingNavigator.Text = "Move last";
+            this.lastItemBindingNavigator.Click += new System.EventHandler(this.lastItemBindingNavigator_Click);
             // 
             // bindingNavigatorSeparator2
             // 
@@ -487,12 +493,14 @@
             this.iDClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "IDCliente", true));
             this.iDClienteTextBox.Location = new System.Drawing.Point(103, 39);
             this.iDClienteTextBox.Name = "iDClienteTextBox";
+            this.iDClienteTextBox.ReadOnly = true;
             this.iDClienteTextBox.Size = new System.Drawing.Size(121, 20);
             this.iDClienteTextBox.TabIndex = 2;
             // 
             // iDTipoDocumentoComboBox
             // 
             this.iDTipoDocumentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "IDTipoDocumento", true));
+            this.iDTipoDocumentoComboBox.Enabled = false;
             this.iDTipoDocumentoComboBox.FormattingEnabled = true;
             this.iDTipoDocumentoComboBox.Location = new System.Drawing.Point(344, 38);
             this.iDTipoDocumentoComboBox.Name = "iDTipoDocumentoComboBox";
@@ -504,6 +512,7 @@
             this.documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Documento", true));
             this.documentoTextBox.Location = new System.Drawing.Point(594, 39);
             this.documentoTextBox.Name = "documentoTextBox";
+            this.documentoTextBox.ReadOnly = true;
             this.documentoTextBox.Size = new System.Drawing.Size(121, 20);
             this.documentoTextBox.TabIndex = 6;
             // 
@@ -512,6 +521,7 @@
             this.nombreComercialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "NombreComercial", true));
             this.nombreComercialTextBox.Location = new System.Drawing.Point(103, 72);
             this.nombreComercialTextBox.Name = "nombreComercialTextBox";
+            this.nombreComercialTextBox.ReadOnly = true;
             this.nombreComercialTextBox.Size = new System.Drawing.Size(121, 20);
             this.nombreComercialTextBox.TabIndex = 8;
             // 
@@ -520,6 +530,7 @@
             this.nombresContactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "NombresContacto", true));
             this.nombresContactoTextBox.Location = new System.Drawing.Point(344, 72);
             this.nombresContactoTextBox.Name = "nombresContactoTextBox";
+            this.nombresContactoTextBox.ReadOnly = true;
             this.nombresContactoTextBox.Size = new System.Drawing.Size(121, 20);
             this.nombresContactoTextBox.TabIndex = 10;
             // 
@@ -528,6 +539,7 @@
             this.apellidosContactoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "ApellidosContacto", true));
             this.apellidosContactoTextBox.Location = new System.Drawing.Point(594, 72);
             this.apellidosContactoTextBox.Name = "apellidosContactoTextBox";
+            this.apellidosContactoTextBox.ReadOnly = true;
             this.apellidosContactoTextBox.Size = new System.Drawing.Size(121, 20);
             this.apellidosContactoTextBox.TabIndex = 12;
             // 
@@ -536,6 +548,7 @@
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Direccion", true));
             this.direccionTextBox.Location = new System.Drawing.Point(103, 105);
             this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.ReadOnly = true;
             this.direccionTextBox.Size = new System.Drawing.Size(121, 20);
             this.direccionTextBox.TabIndex = 14;
             // 
@@ -544,6 +557,7 @@
             this.telefono1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Telefono1", true));
             this.telefono1TextBox.Location = new System.Drawing.Point(344, 105);
             this.telefono1TextBox.Name = "telefono1TextBox";
+            this.telefono1TextBox.ReadOnly = true;
             this.telefono1TextBox.Size = new System.Drawing.Size(121, 20);
             this.telefono1TextBox.TabIndex = 16;
             // 
@@ -552,6 +566,7 @@
             this.telefono2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Telefono2", true));
             this.telefono2TextBox.Location = new System.Drawing.Point(594, 105);
             this.telefono2TextBox.Name = "telefono2TextBox";
+            this.telefono2TextBox.ReadOnly = true;
             this.telefono2TextBox.Size = new System.Drawing.Size(121, 20);
             this.telefono2TextBox.TabIndex = 18;
             // 
@@ -560,12 +575,14 @@
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Correo", true));
             this.correoTextBox.Location = new System.Drawing.Point(103, 138);
             this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.ReadOnly = true;
             this.correoTextBox.Size = new System.Drawing.Size(121, 20);
             this.correoTextBox.TabIndex = 20;
             // 
             // aniversarioDateTimePicker
             // 
             this.aniversarioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "Aniversario", true));
+            this.aniversarioDateTimePicker.Enabled = false;
             this.aniversarioDateTimePicker.Location = new System.Drawing.Point(344, 141);
             this.aniversarioDateTimePicker.Name = "aniversarioDateTimePicker";
             this.aniversarioDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -577,6 +594,7 @@
             this.notasTextBox.Location = new System.Drawing.Point(103, 171);
             this.notasTextBox.Multiline = true;
             this.notasTextBox.Name = "notasTextBox";
+            this.notasTextBox.ReadOnly = true;
             this.notasTextBox.Size = new System.Drawing.Size(612, 56);
             this.notasTextBox.TabIndex = 24;
             // 
@@ -592,6 +610,7 @@
             this.modifierItemBindingNavigator.Name = "modifierItemBindingNavigator";
             this.modifierItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.modifierItemBindingNavigator.Text = "Edit";
+            this.modifierItemBindingNavigator.Click += new System.EventHandler(this.modifierItemBindingNavigator_Click);
             // 
             // cancelItemBindingNavigator
             // 
@@ -601,6 +620,7 @@
             this.cancelItemBindingNavigator.Name = "cancelItemBindingNavigator";
             this.cancelItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.cancelItemBindingNavigator.Text = "Cancel";
+            this.cancelItemBindingNavigator.Click += new System.EventHandler(this.cancelItemBindingNavigator_Click);
             // 
             // searchItemBindingNavigator
             // 
@@ -610,6 +630,7 @@
             this.searchItemBindingNavigator.Name = "searchItemBindingNavigator";
             this.searchItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.searchItemBindingNavigator.Text = "Search";
+            this.searchItemBindingNavigator.Click += new System.EventHandler(this.searchItemBindingNavigator_Click);
             // 
             // frmClientes2
             // 
