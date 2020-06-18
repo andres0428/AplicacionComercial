@@ -234,10 +234,10 @@
             // 
             // proveedorBindingNavigator
             // 
-            this.proveedorBindingNavigator.AddNewItem = this.addNewItemBindingNavigator;
+            this.proveedorBindingNavigator.AddNewItem = null;
             this.proveedorBindingNavigator.BindingSource = this.proveedorBindingSource;
             this.proveedorBindingNavigator.CountItem = this.countItemBindingNavigator;
-            this.proveedorBindingNavigator.DeleteItem = this.deleteItemBindingNavigator;
+            this.proveedorBindingNavigator.DeleteItem = null;
             this.proveedorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.firstItemBindingNavigator,
             this.previousItemBindingNavigator,
