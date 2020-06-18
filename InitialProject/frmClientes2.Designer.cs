@@ -247,10 +247,10 @@
             // 
             // clienteBindingNavigator
             // 
-            this.clienteBindingNavigator.AddNewItem = this.addNewItemBindingNavigator;
+            this.clienteBindingNavigator.AddNewItem = null;
             this.clienteBindingNavigator.BindingSource = this.clienteBindingSource;
             this.clienteBindingNavigator.CountItem = this.countItemBindingNavigator;
-            this.clienteBindingNavigator.DeleteItem = this.deleteItemBindingNavigator;
+            this.clienteBindingNavigator.DeleteItem = null;
             this.clienteBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.firstItemBindingNavigator,
             this.previousItemBindingNavigator,
@@ -387,7 +387,7 @@
             this.saveItemBindingNavigator.Name = "saveItemBindingNavigator";
             this.saveItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.saveItemBindingNavigator.Text = "Save Data";
-            this.saveItemBindingNavigator.Click += new System.EventHandler(this.clienteBindingNavigatorSaveItem_Click);
+            this.saveItemBindingNavigator.Click += new System.EventHandler(this.saveItemBindingNavigator_Click);
             // 
             // cancelItemBindingNavigator
             // 

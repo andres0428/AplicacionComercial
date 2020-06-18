@@ -15,15 +15,7 @@ namespace InitialProject
         public frmClientes2()
         {
             InitializeComponent();
-        }
-
-        private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.clienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
-
-        }
+        }       
 
         private void frmClientes2_Load(object sender, EventArgs e)
         {
@@ -56,22 +48,43 @@ namespace InitialProject
 
         private void editItemBindingNavigator_Click(object sender, EventArgs e)
         {
-            HabilitarCampos();
+            habilitarCampos();
         }       
 
         private void addNewItemBindingNavigator_Click(object sender, EventArgs e)
         {
+            habilitarCampos();
+            clienteBindingSource.AddNew();
+            iDTipoDocumentoComboBox.Focus();
 
         }
 
         private void deleteItemBindingNavigator_Click(object sender, EventArgs e)
         {
+            DialogResult rta = MessageBox.Show("Estas Segura de borar el registro actual", "Comfimar",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (rta == DialogResult.No) return;
+            clienteBindingSource.RemoveAt(clienteBindingSource.Position);
+            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
 
         }
 
+        private void saveItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+            if (!validaCampos()) return;
+            this.Validate();
+            this.clienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+            deshabilitarCampos();
+            errorProvider1.Clear();    
+
+        }      
+
         private void cancelItemBindingNavigator_Click(object sender, EventArgs e)
         {
-
+            this.clienteBindingSource .CancelEdit();
+            deshabilitarCampos();
+            errorProvider1.Clear();
         }
 
         private void searchItemBindingNavigator_Click(object sender, EventArgs e)
@@ -80,7 +93,7 @@ namespace InitialProject
         }
 
         //************************************************ Metodos ***************************************************
-        private void HabilitarCampos()
+        private void habilitarCampos()
         {
             firstItemBindingNavigator.Enabled = false;
             previousItemBindingNavigator.Enabled = false;
@@ -107,6 +120,94 @@ namespace InitialProject
             aniversarioDateTimePicker.Enabled = true;
             notasTextBox.ReadOnly = false;            
             iDTipoDocumentoComboBox.Focus();
+        }
+
+        private void deshabilitarCampos()
+        {
+            firstItemBindingNavigator.Enabled = true;
+            previousItemBindingNavigator.Enabled = true;
+            nextItemBindingNavigator.Enabled = true;
+            lastItemBindingNavigator.Enabled = true;
+            editItemBindingNavigator.Enabled = true;
+            addNewItemBindingNavigator.Enabled = true;
+            deleteItemBindingNavigator.Enabled = true;
+            saveItemBindingNavigator.Enabled = false;
+            cancelItemBindingNavigator.Enabled = false;
+            searchItemBindingNavigator.Enabled = true;
+
+            //campos texbox
+            //iDClienteTextBox.ReadOnly = true;
+            iDTipoDocumentoComboBox.Enabled = false;
+            documentoTextBox.ReadOnly = true;
+            nombreComercialTextBox.ReadOnly = true;
+            nombresContactoTextBox.ReadOnly = true;
+            apellidosContactoTextBox.ReadOnly = true;
+            direccionTextBox.ReadOnly = true;
+            telefono1TextBox.ReadOnly = true;
+            telefono2TextBox.ReadOnly = true;
+            correoTextBox.ReadOnly = true;
+            aniversarioDateTimePicker.Enabled = false;
+            notasTextBox.ReadOnly = true;
+            iDTipoDocumentoComboBox.Focus();
+        }
+
+        private bool validaCampos()
+        {
+            if (iDTipoDocumentoComboBox.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(iDTipoDocumentoComboBox, "Debes ingresar un tipo de documento");
+                iDTipoDocumentoComboBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (documentoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(documentoTextBox, "Debes ingresar un  documento");
+                documentoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (nombreComercialTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(nombreComercialTextBox, "Debes ingresar un nombre comercial");
+                nombreComercialTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (nombresContactoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(nombresContactoTextBox, "Debes ingresar un nombre");
+                nombresContactoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (apellidosContactoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(apellidosContactoTextBox, "Debes ingresar un apellido");
+                apellidosContactoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();            
+
+            if (correoTextBox.Text != string.Empty)
+            {
+                RegexUtilities regexUtilities = new RegexUtilities();
+                if (!regexUtilities.IsValidEmail(correoTextBox.Text))
+                {
+                    errorProvider1.SetError(correoTextBox, "Ingresa correo valido");
+                    correoTextBox.Focus();
+                    return false;
+                }
+                errorProvider1.Clear();
+            }
+
+
+            return true;
+
         }
 
     }
