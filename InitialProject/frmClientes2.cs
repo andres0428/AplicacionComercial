@@ -54,10 +54,10 @@ namespace InitialProject
 
         }
 
-        private void modifierItemBindingNavigator_Click(object sender, EventArgs e)
+        private void editItemBindingNavigator_Click(object sender, EventArgs e)
         {
-
-        }
+            HabilitarCampos();
+        }       
 
         private void addNewItemBindingNavigator_Click(object sender, EventArgs e)
         {
@@ -78,5 +78,36 @@ namespace InitialProject
         {
 
         }
+
+        //************************************************ Metodos ***************************************************
+        private void HabilitarCampos()
+        {
+            firstItemBindingNavigator.Enabled = false;
+            previousItemBindingNavigator.Enabled = false;
+            nextItemBindingNavigator.Enabled = false;
+            lastItemBindingNavigator.Enabled = false;
+            editItemBindingNavigator.Enabled = false;
+            addNewItemBindingNavigator.Enabled = false;
+            deleteItemBindingNavigator.Enabled = false;
+            saveItemBindingNavigator.Enabled = true;
+            cancelItemBindingNavigator.Enabled = true;
+            searchItemBindingNavigator.Enabled = false;
+
+            //campos texbox
+            //iDClienteTextBox.ReadOnly = false;
+            iDTipoDocumentoComboBox.Enabled = true;
+            documentoTextBox.ReadOnly = false;
+            nombreComercialTextBox.ReadOnly = false;
+            nombresContactoTextBox.ReadOnly = false;
+            apellidosContactoTextBox.ReadOnly = false;
+            direccionTextBox.ReadOnly = false;
+            telefono1TextBox.ReadOnly = false;
+            telefono2TextBox.ReadOnly = false;
+            correoTextBox.ReadOnly = false;
+            aniversarioDateTimePicker.Enabled = true;
+            notasTextBox.ReadOnly = false;            
+            iDTipoDocumentoComboBox.Focus();
+        }
+
     }
 }
