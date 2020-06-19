@@ -12,6 +12,10 @@ namespace InitialProject
 {
     public partial class frmBusquedaProveedores : Form
     {
+        private int idProvedor;
+
+        public int IdProvedor { get => idProvedor; }
+
         public frmBusquedaProveedores()
         {
             InitializeComponent();
@@ -73,6 +77,30 @@ namespace InitialProject
             nombresContactoToolStripTextBox.Text = string.Empty;
             apellidosContactoToolStripTextBox.Text = string.Empty;
             busquedaProveedoresToolStripButton_Click(sender, e);
+        }
+
+        private void buscarButton_Click(object sender, EventArgs e)
+        {
+            if (proveedorDataGridView1.Rows.Count == 0)
+            {
+                idProvedor = 0;
+            }
+            else if (proveedorDataGridView1.SelectedRows.Count != 0)
+            {
+                idProvedor = (int)proveedorDataGridView1.SelectedRows[0].Cells[0].Value;
+            }
+            else
+            {
+                idProvedor = (int)proveedorDataGridView1.Rows[0].Cells[0].Value;
+            }
+            this.Close();
+
+        }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            idProvedor = 0;
+            this.Close();
         }
     }
 }

@@ -70,6 +70,7 @@ namespace InitialProject
         {
             frmBusquedaProveedores frm = new frmBusquedaProveedores();
             frm.ShowDialog();
+            MessageBox.Show("hola : " + frm.IdProvedor);
         }
 
         private void nombresContactoTextBox_TextChanged(object sender, EventArgs e)

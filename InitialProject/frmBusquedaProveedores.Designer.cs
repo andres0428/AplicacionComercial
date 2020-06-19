@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaProveedores));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.proveedorDataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDTipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,27 +58,27 @@
             this.termineRadioButton = new System.Windows.Forms.RadioButton();
             this.empieceRadioButton = new System.Windows.Forms.RadioButton();
             this.contengaRadioButton = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cancelarButton = new System.Windows.Forms.Button();
+            this.buscarButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).BeginInit();
             this.busquedaProveedoresToolStrip.SuspendLayout();
             this.eleccionGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // proveedorDataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.proveedorDataGridView1.AllowUserToAddRows = false;
+            this.proveedorDataGridView1.AllowUserToDeleteRows = false;
+            this.proveedorDataGridView1.AllowUserToOrderColumns = true;
+            this.proveedorDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.proveedorDataGridView1.AutoGenerateColumns = false;
+            this.proveedorDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.proveedorDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.proveedorDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDProveedorDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.iDTipoDocumentoDataGridViewTextBoxColumn,
@@ -90,12 +90,12 @@
             this.telefono2DataGridViewTextBoxColumn,
             this.correoDataGridViewTextBoxColumn,
             this.notasDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.proveedorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(820, 315);
-            this.dataGridView1.TabIndex = 0;
+            this.proveedorDataGridView1.DataSource = this.proveedorBindingSource;
+            this.proveedorDataGridView1.Location = new System.Drawing.Point(0, 157);
+            this.proveedorDataGridView1.Name = "proveedorDataGridView1";
+            this.proveedorDataGridView1.ReadOnly = true;
+            this.proveedorDataGridView1.Size = new System.Drawing.Size(820, 315);
+            this.proveedorDataGridView1.TabIndex = 0;
             // 
             // iDProveedorDataGridViewTextBoxColumn
             // 
@@ -304,45 +304,47 @@
             this.contengaRadioButton.Text = "Contenga";
             this.contengaRadioButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cancelarButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::InitialProject.Properties.Resources.ic_clear;
-            this.button2.Location = new System.Drawing.Point(699, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 57);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancelarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelarButton.FlatAppearance.BorderSize = 0;
+            this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelarButton.Image = global::InitialProject.Properties.Resources.ic_clear;
+            this.cancelarButton.Location = new System.Drawing.Point(699, 44);
+            this.cancelarButton.Name = "cancelarButton";
+            this.cancelarButton.Size = new System.Drawing.Size(60, 57);
+            this.cancelarButton.TabIndex = 4;
+            this.cancelarButton.UseVisualStyleBackColor = true;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
-            // button1
+            // buscarButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::InitialProject.Properties.Resources.ic_check;
-            this.button1.Location = new System.Drawing.Point(604, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 57);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buscarButton.FlatAppearance.BorderSize = 0;
+            this.buscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarButton.Image = global::InitialProject.Properties.Resources.ic_check;
+            this.buscarButton.Location = new System.Drawing.Point(604, 44);
+            this.buscarButton.Name = "buscarButton";
+            this.buscarButton.Size = new System.Drawing.Size(60, 57);
+            this.buscarButton.TabIndex = 3;
+            this.buscarButton.UseVisualStyleBackColor = true;
+            this.buscarButton.Click += new System.EventHandler(this.buscarButton_Click);
             // 
             // frmBusquedaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 471);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelarButton);
+            this.Controls.Add(this.buscarButton);
             this.Controls.Add(this.eleccionGroupBox);
             this.Controls.Add(this.busquedaProveedoresToolStrip);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.proveedorDataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBusquedaProveedores";
             this.Text = "frmBusquedaProveedores";
             this.Load += new System.EventHandler(this.frmBusquedaProveedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).EndInit();
             this.busquedaProveedoresToolStrip.ResumeLayout(false);
@@ -356,7 +358,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView proveedorDataGridView1;
         private DS.DSAplicacionComercial dSAplicacionComercial;
         private System.Windows.Forms.BindingSource proveedorBindingSource;
         private DS.DSAplicacionComercialTableAdapters.ProveedorTableAdapter proveedorTableAdapter;
@@ -384,7 +386,7 @@
         private System.Windows.Forms.RadioButton termineRadioButton;
         private System.Windows.Forms.RadioButton empieceRadioButton;
         private System.Windows.Forms.RadioButton contengaRadioButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buscarButton;
+        private System.Windows.Forms.Button cancelarButton;
     }
 }
