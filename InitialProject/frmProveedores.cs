@@ -68,7 +68,8 @@ namespace InitialProject
 
         private void searchItemBindingNavigator_Click(object sender, EventArgs e)
         {
-
+            frmBusquedaProveedores frm = new frmBusquedaProveedores();
+            frm.ShowDialog();
         }
 
         private void nombresContactoTextBox_TextChanged(object sender, EventArgs e)

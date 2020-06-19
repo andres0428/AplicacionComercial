@@ -61,11 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSAplicacionComercial.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmBusquedaProveedor.cs">
+    <Compile Include="frmBusquedaProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBusquedaProveedor.Designer.cs">
-      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    <Compile Include="frmBusquedaProveedores.Designer.cs">
+      <DependentUpon>frmBusquedaProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
@@ -100,8 +100,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegexUtilities.cs" />
-    <EmbeddedResource Include="frmBusquedaProveedor.resx">
-      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    <EmbeddedResource Include="frmBusquedaProveedores.resx">
+      <DependentUpon>frmBusquedaProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -166,7 +166,9 @@
   <ItemGroup>
     <None Include="Resources\128x128Usuarios.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ic_search.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_check_circle.png" />
   </ItemGroup>

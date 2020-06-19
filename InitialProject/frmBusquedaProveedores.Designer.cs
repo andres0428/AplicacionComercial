@@ -1,6 +1,6 @@
 ﻿namespace InitialProject
 {
-    partial class frmBusquedaProveedor
+    partial class frmBusquedaProveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaProveedor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaProveedores));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dSAplicacionComercial = new InitialProject.DS.DSAplicacionComercial();
-            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proveedorTableAdapter = new InitialProject.DS.DSAplicacionComercialTableAdapters.ProveedorTableAdapter();
-            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoDocumentoTableAdapter = new InitialProject.DS.DSAplicacionComercialTableAdapters.TipoDocumentoTableAdapter();
-            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.iDProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDTipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,19 +42,22 @@
             this.telefono2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.busquedaProveedorToolStrip = new System.Windows.Forms.ToolStrip();
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAplicacionComercial = new InitialProject.DS.DSAplicacionComercial();
+            this.proveedorTableAdapter = new InitialProject.DS.DSAplicacionComercialTableAdapters.ProveedorTableAdapter();
+            this.busquedaProveedoresToolStrip = new System.Windows.Forms.ToolStrip();
             this.nombreToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.nombreToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.nombresContactoToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.nombresContactoToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.apellidosContactoToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.apellidosContactoToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.busquedaProveedorToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.busquedaProveedoresToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.eleccionGroupBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
-            this.busquedaProveedorToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).BeginInit();
+            this.busquedaProveedoresToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -71,6 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDProveedorDataGridViewTextBoxColumn,
@@ -85,46 +84,18 @@
             this.correoDataGridViewTextBoxColumn,
             this.notasDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.proveedorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 205);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 157);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(820, 263);
+            this.dataGridView1.Size = new System.Drawing.Size(820, 315);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dSAplicacionComercial
-            // 
-            this.dSAplicacionComercial.DataSetName = "DSAplicacionComercial";
-            this.dSAplicacionComercial.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proveedorBindingSource
-            // 
-            this.proveedorBindingSource.DataMember = "Proveedor";
-            this.proveedorBindingSource.DataSource = this.dSAplicacionComercial;
-            // 
-            // proveedorTableAdapter
-            // 
-            this.proveedorTableAdapter.ClearBeforeFill = true;
-            // 
-            // tipoDocumentoBindingSource
-            // 
-            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
-            this.tipoDocumentoBindingSource.DataSource = this.dSAplicacionComercial;
-            // 
-            // tipoDocumentoTableAdapter
-            // 
-            this.tipoDocumentoTableAdapter.ClearBeforeFill = true;
             // 
             // iDProveedorDataGridViewTextBoxColumn
             // 
             this.iDProveedorDataGridViewTextBoxColumn.DataPropertyName = "IDProveedor";
-            this.iDProveedorDataGridViewTextBoxColumn.DataSource = this.tipoDocumentoBindingSource;
-            this.iDProveedorDataGridViewTextBoxColumn.DisplayMember = "Descripcion";
             this.iDProveedorDataGridViewTextBoxColumn.HeaderText = "ID Proveedor";
             this.iDProveedorDataGridViewTextBoxColumn.Name = "iDProveedorDataGridViewTextBoxColumn";
             this.iDProveedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDProveedorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.iDProveedorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iDProveedorDataGridViewTextBoxColumn.ValueMember = "IDTipoDocumento";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -196,21 +167,35 @@
             this.notasDataGridViewTextBoxColumn.Name = "notasDataGridViewTextBoxColumn";
             this.notasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // busquedaProveedorToolStrip
+            // proveedorBindingSource
             // 
-            this.busquedaProveedorToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.proveedorBindingSource.DataMember = "Proveedor";
+            this.proveedorBindingSource.DataSource = this.dSAplicacionComercial;
+            // 
+            // dSAplicacionComercial
+            // 
+            this.dSAplicacionComercial.DataSetName = "DSAplicacionComercial";
+            this.dSAplicacionComercial.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proveedorTableAdapter
+            // 
+            this.proveedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // busquedaProveedoresToolStrip
+            // 
+            this.busquedaProveedoresToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nombreToolStripLabel,
             this.nombreToolStripTextBox,
             this.nombresContactoToolStripLabel,
             this.nombresContactoToolStripTextBox,
             this.apellidosContactoToolStripLabel,
             this.apellidosContactoToolStripTextBox,
-            this.busquedaProveedorToolStripButton});
-            this.busquedaProveedorToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.busquedaProveedorToolStrip.Name = "busquedaProveedorToolStrip";
-            this.busquedaProveedorToolStrip.Size = new System.Drawing.Size(820, 25);
-            this.busquedaProveedorToolStrip.TabIndex = 1;
-            this.busquedaProveedorToolStrip.Text = "busquedaProveedorToolStrip";
+            this.busquedaProveedoresToolStripButton});
+            this.busquedaProveedoresToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.busquedaProveedoresToolStrip.Name = "busquedaProveedoresToolStrip";
+            this.busquedaProveedoresToolStrip.Size = new System.Drawing.Size(820, 25);
+            this.busquedaProveedoresToolStrip.TabIndex = 1;
+            this.busquedaProveedoresToolStrip.Text = "busquedaProveedoresToolStrip";
             // 
             // nombreToolStripLabel
             // 
@@ -245,31 +230,41 @@
             this.apellidosContactoToolStripTextBox.Name = "apellidosContactoToolStripTextBox";
             this.apellidosContactoToolStripTextBox.Size = new System.Drawing.Size(100, 25);
             // 
-            // busquedaProveedorToolStripButton
+            // busquedaProveedoresToolStripButton
             // 
-            this.busquedaProveedorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.busquedaProveedorToolStripButton.Name = "busquedaProveedorToolStripButton";
-            this.busquedaProveedorToolStripButton.Size = new System.Drawing.Size(117, 22);
-            this.busquedaProveedorToolStripButton.Text = "BusquedaProveedor";
-            this.busquedaProveedorToolStripButton.Click += new System.EventHandler(this.busquedaProveedorToolStripButton_Click);
+            this.busquedaProveedoresToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.busquedaProveedoresToolStripButton.Image = global::InitialProject.Properties.Resources.ic_search;
+            this.busquedaProveedoresToolStripButton.Name = "busquedaProveedoresToolStripButton";
+            this.busquedaProveedoresToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.busquedaProveedoresToolStripButton.Text = "BusquedaProveedores";
+            this.busquedaProveedoresToolStripButton.Click += new System.EventHandler(this.busquedaProveedoresToolStripButton_Click);
             // 
-            // frmBusquedaProveedor
+            // eleccionGroupBox
+            // 
+            this.eleccionGroupBox.Location = new System.Drawing.Point(13, 43);
+            this.eleccionGroupBox.Name = "eleccionGroupBox";
+            this.eleccionGroupBox.Size = new System.Drawing.Size(473, 43);
+            this.eleccionGroupBox.TabIndex = 2;
+            this.eleccionGroupBox.TabStop = false;
+            this.eleccionGroupBox.Text = "Caracter de busqueda";
+            // 
+            // frmBusquedaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 469);
-            this.Controls.Add(this.busquedaProveedorToolStrip);
+            this.ClientSize = new System.Drawing.Size(820, 471);
+            this.Controls.Add(this.eleccionGroupBox);
+            this.Controls.Add(this.busquedaProveedoresToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmBusquedaProveedor";
-            this.Text = "frmBusquedaProveedor";
-            this.Load += new System.EventHandler(this.frmBusquedaProveedor_Load);
+            this.Name = "frmBusquedaProveedores";
+            this.Text = "frmBusquedaProveedores";
+            this.Load += new System.EventHandler(this.frmBusquedaProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
-            this.busquedaProveedorToolStrip.ResumeLayout(false);
-            this.busquedaProveedorToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).EndInit();
+            this.busquedaProveedoresToolStrip.ResumeLayout(false);
+            this.busquedaProveedoresToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,9 +276,7 @@
         private DS.DSAplicacionComercial dSAplicacionComercial;
         private System.Windows.Forms.BindingSource proveedorBindingSource;
         private DS.DSAplicacionComercialTableAdapters.ProveedorTableAdapter proveedorTableAdapter;
-        private System.Windows.Forms.BindingSource tipoDocumentoBindingSource;
-        private DS.DSAplicacionComercialTableAdapters.TipoDocumentoTableAdapter tipoDocumentoTableAdapter;
-        private System.Windows.Forms.DataGridViewComboBoxColumn iDProveedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDTipoDocumentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn documentoDataGridViewTextBoxColumn;
@@ -294,13 +287,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStrip busquedaProveedorToolStrip;
+        private System.Windows.Forms.ToolStrip busquedaProveedoresToolStrip;
         private System.Windows.Forms.ToolStripLabel nombreToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox nombreToolStripTextBox;
         private System.Windows.Forms.ToolStripLabel nombresContactoToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox nombresContactoToolStripTextBox;
         private System.Windows.Forms.ToolStripLabel apellidosContactoToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox apellidosContactoToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton busquedaProveedorToolStripButton;
+        private System.Windows.Forms.ToolStripButton busquedaProveedoresToolStripButton;
+        private System.Windows.Forms.GroupBox eleccionGroupBox;
     }
 }
