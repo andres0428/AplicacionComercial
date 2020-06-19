@@ -73,9 +73,39 @@ namespace InitialProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_cached {
+            get {
+                object obj = ResourceManager.GetObject("ic_cached", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_check {
+            get {
+                object obj = ResourceManager.GetObject("ic_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_check_circle {
             get {
                 object obj = ResourceManager.GetObject("ic_check_circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_clear {
+            get {
+                object obj = ResourceManager.GetObject("ic_clear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

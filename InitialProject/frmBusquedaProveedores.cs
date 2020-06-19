@@ -26,15 +26,53 @@ namespace InitialProject
 
         private void busquedaProveedoresToolStripButton_Click(object sender, EventArgs e)
         {
+            string nombre, nombresContacto, apellidosContacto;
+
+            if (contengaRadioButton.Checked == true)
+            {
+                nombre = "%"+ nombreToolStripTextBox.Text + "%";
+                nombresContacto = "%" + nombresContactoToolStripTextBox.Text + "%";
+                apellidosContacto = "%" + apellidosContactoToolStripTextBox.Text + "%";
+
+            }else if (empieceRadioButton.Checked == true)
+            {
+                nombre = nombreToolStripTextBox.Text + "%";
+                nombresContacto = nombresContactoToolStripTextBox.Text + "%";
+                apellidosContacto = apellidosContactoToolStripTextBox.Text + "%";
+
+            }else if (termineRadioButton.Checked == true)
+            {
+                nombre = "%" + nombreToolStripTextBox.Text;
+                nombresContacto = "%" + nombresContactoToolStripTextBox.Text;
+                apellidosContacto = "%" + apellidosContactoToolStripTextBox.Text;
+            }
+            else
+            {
+                nombre = nombreToolStripTextBox.Text;
+                nombresContacto = nombresContactoToolStripTextBox.Text;
+                apellidosContacto = apellidosContactoToolStripTextBox.Text;
+            }
+
             try
             {
-                this.proveedorTableAdapter.BusquedaProveedores(this.dSAplicacionComercial.Proveedor, nombreToolStripTextBox.Text, nombresContactoToolStripTextBox.Text, apellidosContactoToolStripTextBox.Text);
+                this.proveedorTableAdapter.BusquedaProveedores(this.dSAplicacionComercial.Proveedor, 
+                    nombre, 
+                    nombresContacto, 
+                    apellidosContacto);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void reiniciarButton_Click(object sender, EventArgs e)
+        {
+            nombreToolStripTextBox.Text = string.Empty;
+            nombresContactoToolStripTextBox.Text = string.Empty;
+            apellidosContactoToolStripTextBox.Text = string.Empty;
+            busquedaProveedoresToolStripButton_Click(sender, e);
         }
     }
 }

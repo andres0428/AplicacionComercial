@@ -175,5 +175,14 @@
   <ItemGroup>
     <None Include="Resources\ic_launcher.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cached.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_clear.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

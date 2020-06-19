@@ -54,10 +54,17 @@
             this.apellidosContactoToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.busquedaProveedoresToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.eleccionGroupBox = new System.Windows.Forms.GroupBox();
+            this.reiniciarButton = new System.Windows.Forms.Button();
+            this.termineRadioButton = new System.Windows.Forms.RadioButton();
+            this.empieceRadioButton = new System.Windows.Forms.RadioButton();
+            this.contengaRadioButton = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).BeginInit();
             this.busquedaProveedoresToolStrip.SuspendLayout();
+            this.eleccionGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -241,18 +248,93 @@
             // 
             // eleccionGroupBox
             // 
+            this.eleccionGroupBox.Controls.Add(this.reiniciarButton);
+            this.eleccionGroupBox.Controls.Add(this.termineRadioButton);
+            this.eleccionGroupBox.Controls.Add(this.empieceRadioButton);
+            this.eleccionGroupBox.Controls.Add(this.contengaRadioButton);
             this.eleccionGroupBox.Location = new System.Drawing.Point(13, 43);
             this.eleccionGroupBox.Name = "eleccionGroupBox";
-            this.eleccionGroupBox.Size = new System.Drawing.Size(473, 43);
+            this.eleccionGroupBox.Size = new System.Drawing.Size(480, 54);
             this.eleccionGroupBox.TabIndex = 2;
             this.eleccionGroupBox.TabStop = false;
             this.eleccionGroupBox.Text = "Caracter de busqueda";
+            // 
+            // reiniciarButton
+            // 
+            this.reiniciarButton.FlatAppearance.BorderSize = 0;
+            this.reiniciarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reiniciarButton.Image = global::InitialProject.Properties.Resources.ic_cached;
+            this.reiniciarButton.Location = new System.Drawing.Point(401, 8);
+            this.reiniciarButton.Name = "reiniciarButton";
+            this.reiniciarButton.Size = new System.Drawing.Size(73, 42);
+            this.reiniciarButton.TabIndex = 3;
+            this.reiniciarButton.UseVisualStyleBackColor = true;
+            this.reiniciarButton.Click += new System.EventHandler(this.reiniciarButton_Click);
+            // 
+            // termineRadioButton
+            // 
+            this.termineRadioButton.AutoSize = true;
+            this.termineRadioButton.Location = new System.Drawing.Point(204, 20);
+            this.termineRadioButton.Name = "termineRadioButton";
+            this.termineRadioButton.Size = new System.Drawing.Size(63, 17);
+            this.termineRadioButton.TabIndex = 2;
+            this.termineRadioButton.TabStop = true;
+            this.termineRadioButton.Text = "Termine";
+            this.termineRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // empieceRadioButton
+            // 
+            this.empieceRadioButton.AutoSize = true;
+            this.empieceRadioButton.Location = new System.Drawing.Point(105, 20);
+            this.empieceRadioButton.Name = "empieceRadioButton";
+            this.empieceRadioButton.Size = new System.Drawing.Size(66, 17);
+            this.empieceRadioButton.TabIndex = 1;
+            this.empieceRadioButton.TabStop = true;
+            this.empieceRadioButton.Text = "Empiece";
+            this.empieceRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // contengaRadioButton
+            // 
+            this.contengaRadioButton.AutoSize = true;
+            this.contengaRadioButton.Location = new System.Drawing.Point(6, 20);
+            this.contengaRadioButton.Name = "contengaRadioButton";
+            this.contengaRadioButton.Size = new System.Drawing.Size(71, 17);
+            this.contengaRadioButton.TabIndex = 0;
+            this.contengaRadioButton.TabStop = true;
+            this.contengaRadioButton.Text = "Contenga";
+            this.contengaRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::InitialProject.Properties.Resources.ic_clear;
+            this.button2.Location = new System.Drawing.Point(699, 44);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 57);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::InitialProject.Properties.Resources.ic_check;
+            this.button1.Location = new System.Drawing.Point(604, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 57);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmBusquedaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 471);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.eleccionGroupBox);
             this.Controls.Add(this.busquedaProveedoresToolStrip);
             this.Controls.Add(this.dataGridView1);
@@ -265,6 +347,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).EndInit();
             this.busquedaProveedoresToolStrip.ResumeLayout(false);
             this.busquedaProveedoresToolStrip.PerformLayout();
+            this.eleccionGroupBox.ResumeLayout(false);
+            this.eleccionGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +380,11 @@
         private System.Windows.Forms.ToolStripTextBox apellidosContactoToolStripTextBox;
         private System.Windows.Forms.ToolStripButton busquedaProveedoresToolStripButton;
         private System.Windows.Forms.GroupBox eleccionGroupBox;
+        private System.Windows.Forms.Button reiniciarButton;
+        private System.Windows.Forms.RadioButton termineRadioButton;
+        private System.Windows.Forms.RadioButton empieceRadioButton;
+        private System.Windows.Forms.RadioButton contengaRadioButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
