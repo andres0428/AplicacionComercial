@@ -91,10 +91,10 @@
             this.correoDataGridViewTextBoxColumn,
             this.notasDataGridViewTextBoxColumn});
             this.proveedorDataGridView1.DataSource = this.proveedorBindingSource;
-            this.proveedorDataGridView1.Location = new System.Drawing.Point(0, 157);
+            this.proveedorDataGridView1.Location = new System.Drawing.Point(0, 107);
             this.proveedorDataGridView1.Name = "proveedorDataGridView1";
             this.proveedorDataGridView1.ReadOnly = true;
-            this.proveedorDataGridView1.Size = new System.Drawing.Size(820, 315);
+            this.proveedorDataGridView1.Size = new System.Drawing.Size(820, 365);
             this.proveedorDataGridView1.TabIndex = 0;
             // 
             // iDProveedorDataGridViewTextBoxColumn
@@ -306,7 +306,7 @@
             // 
             // cancelarButton
             // 
-            this.cancelarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelarButton.FlatAppearance.BorderSize = 0;
             this.cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelarButton.Image = global::InitialProject.Properties.Resources.ic_clear;
@@ -319,7 +319,7 @@
             // 
             // buscarButton
             // 
-            this.buscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buscarButton.FlatAppearance.BorderSize = 0;
             this.buscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buscarButton.Image = global::InitialProject.Properties.Resources.ic_check;

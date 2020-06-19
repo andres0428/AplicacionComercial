@@ -70,7 +70,9 @@ namespace InitialProject
         {
             frmBusquedaProveedores frm = new frmBusquedaProveedores();
             frm.ShowDialog();
-            MessageBox.Show("hola : " + frm.IdProvedor);
+            if (frm.IdProvedor == 0) return;
+            int posicion = proveedorBindingSource.Find("IdProveedor",frm.IdProvedor);
+            proveedorBindingSource.Position = posicion;
         }
 
         private void nombresContactoTextBox_TextChanged(object sender, EventArgs e)
