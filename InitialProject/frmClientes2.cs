@@ -89,7 +89,8 @@ namespace InitialProject
 
         private void searchItemBindingNavigator_Click(object sender, EventArgs e)
         {
-            
+            frmBusquedaClientes2 frm = new frmBusquedaClientes2();
+            frm.ShowDialog();
         }
 
         //************************************************ Metodos ***************************************************
