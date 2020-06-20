@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:Usuario" ZOrder="2" X="524" Y="130" Height="210" Width="189" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Rol" ZOrder="8" X="525" Y="-30" Height="115" Width="163" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:Cliente" ZOrder="6" X="312" Y="81" Height="343" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:Cliente" ZOrder="6" X="312" Y="81" Height="381" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:TipoDocumento" ZOrder="1" X="107" Y="-4" Height="115" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Proveedor" ZOrder="5" X="35" Y="156" Height="324" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="235" />
   </Shapes>

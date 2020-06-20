@@ -91,6 +91,10 @@ namespace InitialProject
         {
             frmBusquedaClientes2 frm = new frmBusquedaClientes2();
             frm.ShowDialog();
+            //MessageBox.Show("Hola" + frm.IdProvedor); //Aca es para hacer una prueba 
+            if (frm.IdCliente == 0) return;
+            int posicion = clienteBindingSource.Find("iDCliente",frm.IdCliente);
+            clienteBindingSource.Position = posicion;
         }
 
         //************************************************ Metodos ***************************************************
