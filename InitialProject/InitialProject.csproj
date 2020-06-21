@@ -97,6 +97,12 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrincipalMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalMDI.Designer.cs">
+      <DependentUpon>frmPrincipalMDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalMDI.resx">
+      <DependentUpon>frmPrincipalMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
@@ -192,6 +201,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submenuGriss64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32minimizarColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar32x32Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar32x32Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buho-sin.fondo-con-letras-dibuajdas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buho-orignal-sinDonfondo-letrasBlancas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodegaNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivoNegroRe20x20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

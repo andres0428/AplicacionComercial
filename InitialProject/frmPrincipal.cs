@@ -45,5 +45,12 @@ namespace InitialProject
         {
 
         }
+
+        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalMDI frm = new frmPrincipalMDI();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

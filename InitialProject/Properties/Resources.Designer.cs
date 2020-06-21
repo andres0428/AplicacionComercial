@@ -73,6 +73,66 @@ namespace InitialProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32x32minimizarColor {
+            get {
+                object obj = ResourceManager.GetObject("32x32minimizarColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archivoNegroRe20x20 {
+            get {
+                object obj = ResourceManager.GetObject("archivoNegroRe20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bodegaNegro20x20 {
+            get {
+                object obj = ResourceManager.GetObject("bodegaNegro20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buho_orignal_sinDonfondo_letrasBlancas {
+            get {
+                object obj = ResourceManager.GetObject("buho-orignal-sinDonfondo-letrasBlancas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buho_sin_fondo_con_letras_dibuajdas {
+            get {
+                object obj = ResourceManager.GetObject("buho-sin.fondo-con-letras-dibuajdas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar32x32Color {
+            get {
+                object obj = ResourceManager.GetObject("cerrar32x32Color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_cached {
             get {
                 object obj = ResourceManager.GetObject("ic_cached", resourceCulture);
@@ -126,6 +186,36 @@ namespace InitialProject.Properties {
         internal static System.Drawing.Bitmap ic_search {
             get {
                 object obj = ResourceManager.GetObject("ic_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurar_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("restaurar-32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurar32x32Color {
+            get {
+                object obj = ResourceManager.GetObject("restaurar32x32Color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap submenuGriss64x64 {
+            get {
+                object obj = ResourceManager.GetObject("submenuGriss64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

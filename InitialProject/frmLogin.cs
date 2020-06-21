@@ -51,7 +51,7 @@ namespace InitialProject
             }
 
 
-            frmPrincipal frm = new frmPrincipal();
+            frmPrincipalMDI frm = new frmPrincipalMDI();
             this.Hide();
             frm.Show();
         }
