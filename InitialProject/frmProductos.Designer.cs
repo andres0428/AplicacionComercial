@@ -69,6 +69,8 @@
             this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
             this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departamentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.DepartamentoTableAdapter();
+            this.iVABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iVATableAdapter = new InitialProject.DSAll.DSAllTableAdapters.IVATableAdapter();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
@@ -79,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dSAll
@@ -409,12 +412,15 @@
             // 
             // iDIVAComboBox
             // 
-            this.iDIVAComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "IDIVA", true));
+            this.iDIVAComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDIVA", true));
+            this.iDIVAComboBox.DataSource = this.iVABindingSource;
+            this.iDIVAComboBox.DisplayMember = "Descripcion";
             this.iDIVAComboBox.FormattingEnabled = true;
             this.iDIVAComboBox.Location = new System.Drawing.Point(325, 48);
             this.iDIVAComboBox.Name = "iDIVAComboBox";
             this.iDIVAComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDIVAComboBox.TabIndex = 5;
+            this.iDIVAComboBox.ValueMember = "IDIVA";
             // 
             // iDMedidaLabel
             // 
@@ -443,6 +449,15 @@
             // 
             this.departamentoTableAdapter.ClearBeforeFill = true;
             // 
+            // iVABindingSource
+            // 
+            this.iVABindingSource.DataMember = "IVA";
+            this.iVABindingSource.DataSource = this.dSAll;
+            // 
+            // iVATableAdapter
+            // 
+            this.iVATableAdapter.ClearBeforeFill = true;
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +483,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,5 +527,7 @@
         private System.Windows.Forms.ComboBox iDDepartamentoComboBox;
         private System.Windows.Forms.BindingSource departamentoBindingSource;
         private DSAll.DSAllTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
+        private System.Windows.Forms.BindingSource iVABindingSource;
+        private DSAll.DSAllTableAdapters.IVATableAdapter iVATableAdapter;
     }
 }
