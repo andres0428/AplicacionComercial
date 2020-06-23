@@ -32,6 +32,12 @@
             System.Windows.Forms.Label iDDepartamentoLabel;
             System.Windows.Forms.Label iDIVALabel;
             System.Windows.Forms.Label iDMedidaLabel;
+            System.Windows.Forms.Label iDProductoLabel;
+            System.Windows.Forms.Label descripcionLabel;
+            System.Windows.Forms.Label medidaLabel;
+            System.Windows.Forms.Label precioLabel;
+            System.Windows.Forms.Label imagenLabel;
+            System.Windows.Forms.Label notasLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.dSAll = new InitialProject.DSAll.DSAll();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -69,13 +75,27 @@
             this.iDIVAComboBox = new System.Windows.Forms.ComboBox();
             this.iVABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
+            this.medidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departamentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.DepartamentoTableAdapter();
             this.iVATableAdapter = new InitialProject.DSAll.DSAllTableAdapters.IVATableAdapter();
-            this.medidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medidaTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.MedidaTableAdapter();
+            this.iDProductoTextBox = new System.Windows.Forms.TextBox();
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.medidaTextBox = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.imagenTextBox = new System.Windows.Forms.TextBox();
+            this.notasTextBox = new System.Windows.Forms.TextBox();
+            this.bucarImagenButton = new System.Windows.Forms.Button();
+            this.imagenPictureBox = new System.Windows.Forms.PictureBox();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
+            iDProductoLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
+            medidaLabel = new System.Windows.Forms.Label();
+            precioLabel = new System.Windows.Forms.Label();
+            imagenLabel = new System.Windows.Forms.Label();
+            notasLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dSAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).BeginInit();
@@ -85,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medidaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // iDDepartamentoLabel
@@ -108,11 +129,65 @@
             // iDMedidaLabel
             // 
             iDMedidaLabel.AutoSize = true;
-            iDMedidaLabel.Location = new System.Drawing.Point(507, 52);
+            iDMedidaLabel.Location = new System.Drawing.Point(475, 53);
             iDMedidaLabel.Name = "iDMedidaLabel";
             iDMedidaLabel.Size = new System.Drawing.Size(56, 13);
             iDMedidaLabel.TabIndex = 6;
             iDMedidaLabel.Text = "IDMedida:";
+            // 
+            // iDProductoLabel
+            // 
+            iDProductoLabel.AutoSize = true;
+            iDProductoLabel.Location = new System.Drawing.Point(34, 78);
+            iDProductoLabel.Name = "iDProductoLabel";
+            iDProductoLabel.Size = new System.Drawing.Size(64, 13);
+            iDProductoLabel.TabIndex = 8;
+            iDProductoLabel.Text = "IDProducto:";
+            // 
+            // descripcionLabel
+            // 
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(253, 78);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel.TabIndex = 10;
+            descripcionLabel.Text = "Descripcion:";
+            // 
+            // medidaLabel
+            // 
+            medidaLabel.AutoSize = true;
+            medidaLabel.Location = new System.Drawing.Point(486, 79);
+            medidaLabel.Name = "medidaLabel";
+            medidaLabel.Size = new System.Drawing.Size(45, 13);
+            medidaLabel.TabIndex = 12;
+            medidaLabel.Text = "Medida:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(58, 104);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 14;
+            precioLabel.Text = "Precio:";
+            // 
+            // imagenLabel
+            // 
+            imagenLabel.AutoSize = true;
+            imagenLabel.Location = new System.Drawing.Point(274, 104);
+            imagenLabel.Name = "imagenLabel";
+            imagenLabel.Size = new System.Drawing.Size(45, 13);
+            imagenLabel.TabIndex = 16;
+            imagenLabel.Text = "Imagen:";
+            // 
+            // notasLabel
+            // 
+            notasLabel.AutoSize = true;
+            notasLabel.Location = new System.Drawing.Point(60, 130);
+            notasLabel.Name = "notasLabel";
+            notasLabel.Size = new System.Drawing.Size(38, 13);
+            notasLabel.TabIndex = 18;
+            notasLabel.Text = "Notas:";
             // 
             // dSAll
             // 
@@ -188,7 +263,7 @@
             this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productoBindingNavigator.Name = "productoBindingNavigator";
             this.productoBindingNavigator.PositionItem = this.positionItemBindingNavigator;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(908, 25);
+            this.productoBindingNavigator.Size = new System.Drawing.Size(1028, 25);
             this.productoBindingNavigator.TabIndex = 0;
             this.productoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -340,7 +415,7 @@
             this.productoDataGridView.Location = new System.Drawing.Point(0, 326);
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.ReadOnly = true;
-            this.productoDataGridView.Size = new System.Drawing.Size(908, 266);
+            this.productoDataGridView.Size = new System.Drawing.Size(1028, 314);
             this.productoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -450,11 +525,16 @@
             this.iDMedidaComboBox.DataSource = this.medidaBindingSource;
             this.iDMedidaComboBox.DisplayMember = "Descripcion";
             this.iDMedidaComboBox.FormattingEnabled = true;
-            this.iDMedidaComboBox.Location = new System.Drawing.Point(569, 48);
+            this.iDMedidaComboBox.Location = new System.Drawing.Point(537, 49);
             this.iDMedidaComboBox.Name = "iDMedidaComboBox";
             this.iDMedidaComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDMedidaComboBox.TabIndex = 7;
             this.iDMedidaComboBox.ValueMember = "IDMedida";
+            // 
+            // medidaBindingSource
+            // 
+            this.medidaBindingSource.DataMember = "Medida";
+            this.medidaBindingSource.DataSource = this.dSAll;
             // 
             // departamentoTableAdapter
             // 
@@ -464,20 +544,99 @@
             // 
             this.iVATableAdapter.ClearBeforeFill = true;
             // 
-            // medidaBindingSource
-            // 
-            this.medidaBindingSource.DataMember = "Medida";
-            this.medidaBindingSource.DataSource = this.dSAll;
-            // 
             // medidaTableAdapter
             // 
             this.medidaTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDProductoTextBox
+            // 
+            this.iDProductoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "IDProducto", true));
+            this.iDProductoTextBox.Location = new System.Drawing.Point(104, 75);
+            this.iDProductoTextBox.Name = "iDProductoTextBox";
+            this.iDProductoTextBox.Size = new System.Drawing.Size(121, 20);
+            this.iDProductoTextBox.TabIndex = 9;
+            // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(325, 75);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(121, 20);
+            this.descripcionTextBox.TabIndex = 11;
+            // 
+            // medidaTextBox
+            // 
+            this.medidaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Medida", true));
+            this.medidaTextBox.Location = new System.Drawing.Point(537, 76);
+            this.medidaTextBox.Name = "medidaTextBox";
+            this.medidaTextBox.Size = new System.Drawing.Size(121, 20);
+            this.medidaTextBox.TabIndex = 13;
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(104, 101);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(121, 20);
+            this.precioTextBox.TabIndex = 15;
+            // 
+            // imagenTextBox
+            // 
+            this.imagenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Imagen", true));
+            this.imagenTextBox.Location = new System.Drawing.Point(325, 101);
+            this.imagenTextBox.Name = "imagenTextBox";
+            this.imagenTextBox.Size = new System.Drawing.Size(121, 20);
+            this.imagenTextBox.TabIndex = 17;
+            // 
+            // notasTextBox
+            // 
+            this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Notas", true));
+            this.notasTextBox.Location = new System.Drawing.Point(104, 127);
+            this.notasTextBox.Multiline = true;
+            this.notasTextBox.Name = "notasTextBox";
+            this.notasTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.notasTextBox.Size = new System.Drawing.Size(342, 48);
+            this.notasTextBox.TabIndex = 19;
+            // 
+            // bucarImagenButton
+            // 
+            this.bucarImagenButton.FlatAppearance.BorderSize = 0;
+            this.bucarImagenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bucarImagenButton.Image = ((System.Drawing.Image)(resources.GetObject("bucarImagenButton.Image")));
+            this.bucarImagenButton.Location = new System.Drawing.Point(452, 104);
+            this.bucarImagenButton.Name = "bucarImagenButton";
+            this.bucarImagenButton.Size = new System.Drawing.Size(79, 71);
+            this.bucarImagenButton.TabIndex = 20;
+            this.bucarImagenButton.UseVisualStyleBackColor = true;
+            // 
+            // imagenPictureBox
+            // 
+            this.imagenPictureBox.Location = new System.Drawing.Point(537, 104);
+            this.imagenPictureBox.Name = "imagenPictureBox";
+            this.imagenPictureBox.Size = new System.Drawing.Size(121, 71);
+            this.imagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagenPictureBox.TabIndex = 21;
+            this.imagenPictureBox.TabStop = false;
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 604);
+            this.ClientSize = new System.Drawing.Size(1028, 652);
+            this.Controls.Add(this.imagenPictureBox);
+            this.Controls.Add(this.bucarImagenButton);
+            this.Controls.Add(notasLabel);
+            this.Controls.Add(this.notasTextBox);
+            this.Controls.Add(imagenLabel);
+            this.Controls.Add(this.imagenTextBox);
+            this.Controls.Add(precioLabel);
+            this.Controls.Add(this.precioTextBox);
+            this.Controls.Add(medidaLabel);
+            this.Controls.Add(this.medidaTextBox);
+            this.Controls.Add(descripcionLabel);
+            this.Controls.Add(this.descripcionTextBox);
+            this.Controls.Add(iDProductoLabel);
+            this.Controls.Add(this.iDProductoTextBox);
             this.Controls.Add(iDMedidaLabel);
             this.Controls.Add(this.iDMedidaComboBox);
             this.Controls.Add(iDIVALabel);
@@ -500,6 +659,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medidaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,5 +707,13 @@
         private DSAll.DSAllTableAdapters.IVATableAdapter iVATableAdapter;
         private System.Windows.Forms.BindingSource medidaBindingSource;
         private DSAll.DSAllTableAdapters.MedidaTableAdapter medidaTableAdapter;
+        private System.Windows.Forms.Button bucarImagenButton;
+        private System.Windows.Forms.TextBox notasTextBox;
+        private System.Windows.Forms.TextBox imagenTextBox;
+        private System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.TextBox medidaTextBox;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.TextBox iDProductoTextBox;
+        private System.Windows.Forms.PictureBox imagenPictureBox;
     }
 }
