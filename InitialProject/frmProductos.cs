@@ -27,6 +27,10 @@ namespace InitialProject
 
         private void frmProductos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dSAll.BodegaProducto' table. You can move, or remove it, as needed.
+            this.bodegaProductoTableAdapter.Fill(this.dSAll.BodegaProducto);
+            // TODO: This line of code loads data into the 'dSAll.Barra' table. You can move, or remove it, as needed.
+            this.barraTableAdapter.Fill(this.dSAll.Barra);
             // TODO: This line of code loads data into the 'dSAll.Medida' table. You can move, or remove it, as needed.
             this.medidaTableAdapter.Fill(this.dSAll.Medida);
             // TODO: This line of code loads data into the 'dSAll.IVA' table. You can move, or remove it, as needed.
