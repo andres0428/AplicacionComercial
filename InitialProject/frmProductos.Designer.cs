@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             System.Windows.Forms.Label iDDepartamentoLabel;
             System.Windows.Forms.Label iDIVALabel;
             System.Windows.Forms.Label iDMedidaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.dSAll = new InitialProject.DSAll.DSAll();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.ProductoTableAdapter();
@@ -65,12 +65,14 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.iDDepartamentoComboBox = new System.Windows.Forms.ComboBox();
-            this.iDIVAComboBox = new System.Windows.Forms.ComboBox();
-            this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
             this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departamentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.DepartamentoTableAdapter();
+            this.iDIVAComboBox = new System.Windows.Forms.ComboBox();
             this.iVABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
+            this.departamentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.DepartamentoTableAdapter();
             this.iVATableAdapter = new InitialProject.DSAll.DSAllTableAdapters.IVATableAdapter();
+            this.medidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medidaTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.MedidaTableAdapter();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
@@ -82,7 +84,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medidaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iDDepartamentoLabel
+            // 
+            iDDepartamentoLabel.AutoSize = true;
+            iDDepartamentoLabel.Location = new System.Drawing.Point(10, 52);
+            iDDepartamentoLabel.Name = "iDDepartamentoLabel";
+            iDDepartamentoLabel.Size = new System.Drawing.Size(88, 13);
+            iDDepartamentoLabel.TabIndex = 2;
+            iDDepartamentoLabel.Text = "IDDepartamento:";
+            // 
+            // iDIVALabel
+            // 
+            iDIVALabel.AutoSize = true;
+            iDIVALabel.Location = new System.Drawing.Point(281, 52);
+            iDIVALabel.Name = "iDIVALabel";
+            iDIVALabel.Size = new System.Drawing.Size(38, 13);
+            iDIVALabel.TabIndex = 4;
+            iDIVALabel.Text = "IDIVA:";
+            // 
+            // iDMedidaLabel
+            // 
+            iDMedidaLabel.AutoSize = true;
+            iDMedidaLabel.Location = new System.Drawing.Point(507, 52);
+            iDMedidaLabel.Name = "iDMedidaLabel";
+            iDMedidaLabel.Size = new System.Drawing.Size(56, 13);
+            iDMedidaLabel.TabIndex = 6;
+            iDMedidaLabel.Text = "IDMedida:";
             // 
             // dSAll
             // 
@@ -380,15 +410,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // iDDepartamentoLabel
-            // 
-            iDDepartamentoLabel.AutoSize = true;
-            iDDepartamentoLabel.Location = new System.Drawing.Point(10, 52);
-            iDDepartamentoLabel.Name = "iDDepartamentoLabel";
-            iDDepartamentoLabel.Size = new System.Drawing.Size(88, 13);
-            iDDepartamentoLabel.TabIndex = 2;
-            iDDepartamentoLabel.Text = "IDDepartamento:";
-            // 
             // iDDepartamentoComboBox
             // 
             this.iDDepartamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDDepartamento", true));
@@ -401,14 +422,10 @@
             this.iDDepartamentoComboBox.TabIndex = 3;
             this.iDDepartamentoComboBox.ValueMember = "IDDepartamento";
             // 
-            // iDIVALabel
+            // departamentoBindingSource
             // 
-            iDIVALabel.AutoSize = true;
-            iDIVALabel.Location = new System.Drawing.Point(281, 52);
-            iDIVALabel.Name = "iDIVALabel";
-            iDIVALabel.Size = new System.Drawing.Size(38, 13);
-            iDIVALabel.TabIndex = 4;
-            iDIVALabel.Text = "IDIVA:";
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.dSAll;
             // 
             // iDIVAComboBox
             // 
@@ -422,41 +439,39 @@
             this.iDIVAComboBox.TabIndex = 5;
             this.iDIVAComboBox.ValueMember = "IDIVA";
             // 
-            // iDMedidaLabel
-            // 
-            iDMedidaLabel.AutoSize = true;
-            iDMedidaLabel.Location = new System.Drawing.Point(507, 52);
-            iDMedidaLabel.Name = "iDMedidaLabel";
-            iDMedidaLabel.Size = new System.Drawing.Size(56, 13);
-            iDMedidaLabel.TabIndex = 6;
-            iDMedidaLabel.Text = "IDMedida:";
-            // 
-            // iDMedidaComboBox
-            // 
-            this.iDMedidaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "IDMedida", true));
-            this.iDMedidaComboBox.FormattingEnabled = true;
-            this.iDMedidaComboBox.Location = new System.Drawing.Point(569, 48);
-            this.iDMedidaComboBox.Name = "iDMedidaComboBox";
-            this.iDMedidaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.iDMedidaComboBox.TabIndex = 7;
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.dSAll;
-            // 
-            // departamentoTableAdapter
-            // 
-            this.departamentoTableAdapter.ClearBeforeFill = true;
-            // 
             // iVABindingSource
             // 
             this.iVABindingSource.DataMember = "IVA";
             this.iVABindingSource.DataSource = this.dSAll;
             // 
+            // iDMedidaComboBox
+            // 
+            this.iDMedidaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDMedida", true));
+            this.iDMedidaComboBox.DataSource = this.medidaBindingSource;
+            this.iDMedidaComboBox.DisplayMember = "Descripcion";
+            this.iDMedidaComboBox.FormattingEnabled = true;
+            this.iDMedidaComboBox.Location = new System.Drawing.Point(569, 48);
+            this.iDMedidaComboBox.Name = "iDMedidaComboBox";
+            this.iDMedidaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.iDMedidaComboBox.TabIndex = 7;
+            this.iDMedidaComboBox.ValueMember = "IDMedida";
+            // 
+            // departamentoTableAdapter
+            // 
+            this.departamentoTableAdapter.ClearBeforeFill = true;
+            // 
             // iVATableAdapter
             // 
             this.iVATableAdapter.ClearBeforeFill = true;
+            // 
+            // medidaBindingSource
+            // 
+            this.medidaBindingSource.DataMember = "Medida";
+            this.medidaBindingSource.DataSource = this.dSAll;
+            // 
+            // medidaTableAdapter
+            // 
+            this.medidaTableAdapter.ClearBeforeFill = true;
             // 
             // frmProductos
             // 
@@ -484,6 +499,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medidaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,5 +545,7 @@
         private DSAll.DSAllTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
         private System.Windows.Forms.BindingSource iVABindingSource;
         private DSAll.DSAllTableAdapters.IVATableAdapter iVATableAdapter;
+        private System.Windows.Forms.BindingSource medidaBindingSource;
+        private DSAll.DSAllTableAdapters.MedidaTableAdapter medidaTableAdapter;
     }
 }
