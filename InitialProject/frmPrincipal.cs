@@ -52,5 +52,12 @@ namespace InitialProject
             this.Hide();
             frm.Show();
         }
+
+        private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //frmProductos frm = new frmProductos();
+            //frm.MdiParent = this;
+            //frm.Show();
+        }
     }
 }

@@ -166,6 +166,7 @@ namespace InitialProject
         private void productosButton_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
+            AbrirFormPanelMDI(new frmProductos());
         }
 
         private void proveedoresButton_Click(object sender, EventArgs e)
