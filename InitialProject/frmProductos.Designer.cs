@@ -67,6 +67,8 @@
             this.iDDepartamentoComboBox = new System.Windows.Forms.ComboBox();
             this.iDIVAComboBox = new System.Windows.Forms.ComboBox();
             this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departamentoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.DepartamentoTableAdapter();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
@@ -76,6 +78,7 @@
             this.productoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dSAll
@@ -385,12 +388,15 @@
             // 
             // iDDepartamentoComboBox
             // 
-            this.iDDepartamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "IDDepartamento", true));
+            this.iDDepartamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDDepartamento", true));
+            this.iDDepartamentoComboBox.DataSource = this.departamentoBindingSource;
+            this.iDDepartamentoComboBox.DisplayMember = "Descripcion";
             this.iDDepartamentoComboBox.FormattingEnabled = true;
             this.iDDepartamentoComboBox.Location = new System.Drawing.Point(104, 48);
             this.iDDepartamentoComboBox.Name = "iDDepartamentoComboBox";
             this.iDDepartamentoComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDDepartamentoComboBox.TabIndex = 3;
+            this.iDDepartamentoComboBox.ValueMember = "IDDepartamento";
             // 
             // iDIVALabel
             // 
@@ -428,6 +434,15 @@
             this.iDMedidaComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDMedidaComboBox.TabIndex = 7;
             // 
+            // departamentoBindingSource
+            // 
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.dSAll;
+            // 
+            // departamentoTableAdapter
+            // 
+            this.departamentoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,6 +467,7 @@
             this.productoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,5 +509,7 @@
         private System.Windows.Forms.ComboBox iDMedidaComboBox;
         private System.Windows.Forms.ComboBox iDIVAComboBox;
         private System.Windows.Forms.ComboBox iDDepartamentoComboBox;
+        private System.Windows.Forms.BindingSource departamentoBindingSource;
+        private DSAll.DSAllTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
     }
 }
