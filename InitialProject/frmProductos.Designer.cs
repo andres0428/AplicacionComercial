@@ -39,8 +39,8 @@
             System.Windows.Forms.Label imagenLabel;
             System.Windows.Forms.Label notasLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dSAll = new InitialProject.DSAll.DSAll();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.ProductoTableAdapter();
@@ -626,10 +626,10 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -664,10 +664,10 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Medida";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn9.HeaderText = "Medida";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -688,11 +688,14 @@
             // 
             // bodegaGroupBox
             // 
+            this.bodegaGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bodegaGroupBox.Controls.Add(this.agregarBodegaButton);
             this.bodegaGroupBox.Controls.Add(this.bodegaDataGridView);
             this.bodegaGroupBox.Location = new System.Drawing.Point(346, 191);
             this.bodegaGroupBox.Name = "bodegaGroupBox";
-            this.bodegaGroupBox.Size = new System.Drawing.Size(682, 191);
+            this.bodegaGroupBox.Size = new System.Drawing.Size(682, 197);
             this.bodegaGroupBox.TabIndex = 23;
             this.bodegaGroupBox.TabStop = false;
             this.bodegaGroupBox.Text = "Bodegas";
@@ -741,7 +744,7 @@
             this.bodegaDataGridView.Location = new System.Drawing.Point(19, 87);
             this.bodegaDataGridView.Name = "bodegaDataGridView";
             this.bodegaDataGridView.ReadOnly = true;
-            this.bodegaDataGridView.Size = new System.Drawing.Size(657, 98);
+            this.bodegaDataGridView.Size = new System.Drawing.Size(657, 104);
             this.bodegaDataGridView.TabIndex = 0;
             // 
             // label1
@@ -762,6 +765,7 @@
             // 
             // agregarButton
             // 
+            this.agregarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.agregarButton.FlatAppearance.BorderSize = 0;
             this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarButton.Image = ((System.Drawing.Image)(resources.GetObject("agregarButton.Image")));
@@ -773,6 +777,7 @@
             // 
             // eliminarButton
             // 
+            this.eliminarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.eliminarButton.FlatAppearance.BorderSize = 0;
             this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminarButton.Image")));
@@ -784,10 +789,11 @@
             // 
             // agregarBodegaButton
             // 
+            this.agregarBodegaButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.agregarBodegaButton.FlatAppearance.BorderSize = 0;
             this.agregarBodegaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarBodegaButton.Image = ((System.Drawing.Image)(resources.GetObject("agregarBodegaButton.Image")));
-            this.agregarBodegaButton.Location = new System.Drawing.Point(361, 21);
+            this.agregarBodegaButton.Location = new System.Drawing.Point(615, 21);
             this.agregarBodegaButton.Name = "agregarBodegaButton";
             this.agregarBodegaButton.Size = new System.Drawing.Size(40, 40);
             this.agregarBodegaButton.TabIndex = 4;

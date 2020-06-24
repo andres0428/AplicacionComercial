@@ -73,6 +73,36 @@ namespace InitialProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20x20cerrar2 {
+            get {
+                object obj = ResourceManager.GetObject("20x20cerrar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20x20cerrar21 {
+            get {
+                object obj = ResourceManager.GetObject("20x20cerrar21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _256x256_login {
+            get {
+                object obj = ResourceManager.GetObject("256x256_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32x32minimizarColor {
             get {
                 object obj = ResourceManager.GetObject("32x32minimizarColor", resourceCulture);
@@ -186,6 +216,26 @@ namespace InitialProject.Properties {
         internal static System.Drawing.Bitmap ic_search {
             get {
                 object obj = ResourceManager.GetObject("ic_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimizar20x20 {
+            get {
+                object obj = ResourceManager.GetObject("minimizar20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimizar20x201 {
+            get {
+                object obj = ResourceManager.GetObject("minimizar20x201", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
