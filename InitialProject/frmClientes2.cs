@@ -74,7 +74,16 @@ namespace InitialProject
             if (!validaCampos()) return;
             this.Validate();
             this.clienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+            try
+            {
+                this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+            }
+            catch (Exception)
+            {
+                errorProvider1.SetError(documentoTextBox,"Documento ya existe");
+                documentoTextBox.Focus();
+                return;
+            }
             deshabilitarCampos();
             errorProvider1.Clear();    
 

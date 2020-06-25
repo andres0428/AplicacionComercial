@@ -39,14 +39,14 @@
             System.Windows.Forms.Label imagenLabel;
             System.Windows.Forms.Label notasLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dSAll = new InitialProject.DSAll.DSAll();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.ProductoTableAdapter();
@@ -117,6 +117,7 @@
             this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barraTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.BarraTableAdapter();
             this.bodegaProductoTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.BodegaProductoTableAdapter();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
@@ -514,10 +515,10 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "C2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -557,10 +558,10 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Medida";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn9.HeaderText = "Medida";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -687,6 +688,7 @@
             this.bucarImagenButton.Size = new System.Drawing.Size(79, 71);
             this.bucarImagenButton.TabIndex = 20;
             this.bucarImagenButton.UseVisualStyleBackColor = true;
+            this.bucarImagenButton.Click += new System.EventHandler(this.bucarImagenButton_Click);
             // 
             // imagenPictureBox
             // 
@@ -850,10 +852,10 @@
             // iDBodegaDataGridViewTextBoxColumn
             // 
             this.iDBodegaDataGridViewTextBoxColumn.DataPropertyName = "IDBodega";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = null;
-            this.iDBodegaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.iDBodegaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.iDBodegaDataGridViewTextBoxColumn.HeaderText = "IDBodega";
             this.iDBodegaDataGridViewTextBoxColumn.Name = "iDBodegaDataGridViewTextBoxColumn";
             this.iDBodegaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -873,10 +875,10 @@
             // stockDataGridViewTextBoxColumn
             // 
             this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N2";
-            dataGridViewCellStyle12.NullValue = null;
-            this.stockDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.stockDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
             this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
             this.stockDataGridViewTextBoxColumn.ReadOnly = true;
@@ -884,10 +886,10 @@
             // minimoDataGridViewTextBoxColumn
             // 
             this.minimoDataGridViewTextBoxColumn.DataPropertyName = "Minimo";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "C2";
-            dataGridViewCellStyle13.NullValue = null;
-            this.minimoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.minimoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.minimoDataGridViewTextBoxColumn.HeaderText = "Minimo";
             this.minimoDataGridViewTextBoxColumn.Name = "minimoDataGridViewTextBoxColumn";
             this.minimoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -895,10 +897,10 @@
             // maximoDataGridViewTextBoxColumn
             // 
             this.maximoDataGridViewTextBoxColumn.DataPropertyName = "Maximo";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "C2";
-            dataGridViewCellStyle14.NullValue = null;
-            this.maximoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.maximoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.maximoDataGridViewTextBoxColumn.HeaderText = "Maximo";
             this.maximoDataGridViewTextBoxColumn.Name = "maximoDataGridViewTextBoxColumn";
             this.maximoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -906,10 +908,10 @@
             // diasReposicionDataGridViewTextBoxColumn
             // 
             this.diasReposicionDataGridViewTextBoxColumn.DataPropertyName = "DiasReposicion";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N2";
-            dataGridViewCellStyle15.NullValue = null;
-            this.diasReposicionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.diasReposicionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.diasReposicionDataGridViewTextBoxColumn.HeaderText = "DiasReposicion";
             this.diasReposicionDataGridViewTextBoxColumn.Name = "diasReposicionDataGridViewTextBoxColumn";
             this.diasReposicionDataGridViewTextBoxColumn.ReadOnly = true;
@@ -917,10 +919,10 @@
             // cantidadMinimaDataGridViewTextBoxColumn
             // 
             this.cantidadMinimaDataGridViewTextBoxColumn.DataPropertyName = "CantidadMinima";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            dataGridViewCellStyle16.NullValue = null;
-            this.cantidadMinimaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.cantidadMinimaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.cantidadMinimaDataGridViewTextBoxColumn.HeaderText = "CantidadMinima";
             this.cantidadMinimaDataGridViewTextBoxColumn.Name = "cantidadMinimaDataGridViewTextBoxColumn";
             this.cantidadMinimaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -937,6 +939,10 @@
             // bodegaProductoTableAdapter
             // 
             this.bodegaProductoTableAdapter.ClearBeforeFill = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmProductos
             // 
@@ -1066,5 +1072,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maximoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diasReposicionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadMinimaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

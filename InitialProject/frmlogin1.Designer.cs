@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlogin1));
             this.logoPanel = new System.Windows.Forms.Panel();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.inicioSesionLabel = new System.Windows.Forms.Label();
             this.haOlvidadoLaContrasenaLabel = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -42,12 +43,11 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizarPictureBox = new System.Windows.Forms.PictureBox();
             this.cerrarPictureBox = new System.Windows.Forms.PictureBox();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.logoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // logoPanel
@@ -59,6 +59,18 @@
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(250, 237);
             this.logoPanel.TabIndex = 2;
+            // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoPictureBox.Image = global::InitialProject.Properties.Resources._128x128Usuarios;
+            this.logoPictureBox.Location = new System.Drawing.Point(51, 38);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(138, 159);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 0;
+            this.logoPictureBox.TabStop = false;
+            this.logoPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logoPictureBox_MouseDown);
             // 
             // inicioSesionLabel
             // 
@@ -97,7 +109,8 @@
             // usuarioTextBox
             // 
             this.usuarioTextBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.usuarioTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.usuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.usuarioTextBox.Location = new System.Drawing.Point(289, 73);
             this.usuarioTextBox.Multiline = true;
             this.usuarioTextBox.Name = "usuarioTextBox";
@@ -111,7 +124,8 @@
             // claveTextBox
             // 
             this.claveTextBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.claveTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.claveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.claveTextBox.ForeColor = System.Drawing.Color.LightGray;
             this.claveTextBox.Location = new System.Drawing.Point(289, 106);
             this.claveTextBox.Multiline = true;
             this.claveTextBox.Name = "claveTextBox";
@@ -163,7 +177,7 @@
             this.minimizarPictureBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.minimizarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizarPictureBox.Image = global::InitialProject.Properties.Resources.minimizar20x201;
-            this.minimizarPictureBox.Location = new System.Drawing.Point(646, 0);
+            this.minimizarPictureBox.Location = new System.Drawing.Point(641, 0);
             this.minimizarPictureBox.Name = "minimizarPictureBox";
             this.minimizarPictureBox.Size = new System.Drawing.Size(23, 28);
             this.minimizarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,18 +197,6 @@
             this.cerrarPictureBox.TabIndex = 2;
             this.cerrarPictureBox.TabStop = false;
             this.cerrarPictureBox.Click += new System.EventHandler(this.cerrarPictureBox_Click);
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoPictureBox.Image = global::InitialProject.Properties.Resources._256x256_login;
-            this.logoPictureBox.Location = new System.Drawing.Point(51, 38);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(138, 159);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPictureBox.TabIndex = 0;
-            this.logoPictureBox.TabStop = false;
-            this.logoPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logoPictureBox_MouseDown);
             // 
             // frmlogin1
             // 
@@ -224,10 +226,10 @@
             this.Load += new System.EventHandler(this.frmlogin1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmlogin1_MouseDown);
             this.logoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

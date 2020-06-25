@@ -55,8 +55,18 @@ namespace InitialProject
             if (!validaCampos()) return;
             this.Validate();
             this.proveedorBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
-            deshabilitarCampos();            
+            try
+            {
+                this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+            }
+            catch (Exception)
+            {
+                errorProvider1.SetError(documentoTextBox, "No se admiten documentos identicos");
+                documentoTextBox.Focus();
+                return;
+            }
+            deshabilitarCampos();
+            errorProvider1.Clear();
         }       
 
         private void cancelItemBindingNavigator_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace InitialProject
             llenarGrillas();
         }
 
-        #region Metodos
+        #region LlenarGrillas
         private void llenarGrillas()
         {
             this.barraTableAdapter.FillBy(this.dSAll.Barra, Convert.ToInt32(iDProductoTextBox.Text));
@@ -48,21 +49,25 @@ namespace InitialProject
         private void firstItemBindingNavigator_Click(object sender, EventArgs e)
         {
             llenarGrillas();
+            cargarImagen();
         }
 
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
             llenarGrillas();
+            cargarImagen();
         }
 
         private void nextItemBindingNavigator_Click(object sender, EventArgs e)
         {
             llenarGrillas();
+            cargarImagen();
         }
 
         private void lastItemBindingNavigator_Click(object sender, EventArgs e)
         {
             llenarGrillas();
+            cargarImagen();
         }
         #endregion
        
@@ -241,6 +246,30 @@ namespace InitialProject
 
             return true;
 
+        }
+        #endregion
+
+        #region ImagenesProductos
+        private void bucarImagenButton_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            imagenTextBox.Text = openFileDialog1.FileName;            
+            cargarImagen();
+        }
+
+        private void cargarImagen()
+        {
+            if (imagenTextBox.Text == string.Empty)
+            {
+                imagenPictureBox.Image = null;
+            }
+            else
+            {
+                if (File.Exists(imagenTextBox.Text))
+                {
+                    imagenPictureBox.Load(imagenTextBox.Text);
+                }
+            }
         }
         #endregion
     }
