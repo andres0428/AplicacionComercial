@@ -35,6 +35,7 @@ namespace InitialProject
            
 
             llenarGrillas();
+            cargarImagen();
         }
 
         #region LlenarGrillas
@@ -272,5 +273,11 @@ namespace InitialProject
             }
         }
         #endregion
+
+        private void agregarBarraButton_Click(object sender, EventArgs e)
+        {
+            frmBarras frm = new frmBarras();
+            frm.ShowDialog();
+        }
     }
 }

@@ -103,9 +103,39 @@ namespace InitialProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32x32cerrar {
+            get {
+                object obj = ResourceManager.GetObject("32x32cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32x32minimizarColor {
             get {
                 object obj = ResourceManager.GetObject("32x32minimizarColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aceptarinicio_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("aceptarinicio 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agregarpque32x32 {
+            get {
+                object obj = ResourceManager.GetObject("agregarpque32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -133,6 +133,9 @@
   <data name="submenuGriss64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\submenuGriss64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="32x32cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32x32cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,11 +145,17 @@
   <data name="20x20cerrar21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20x20cerrar21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bodegaNegro20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bodegaNegro20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_check_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_check_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="20x20cerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20x20cerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restaurar-32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurar-32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_cached" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_cached.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,14 +166,14 @@
   <data name="restaurar32x32Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurar32x32Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_launcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_launcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buho-sin.fondo-con-letras-dibuajdas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buho-sin.fondo-con-letras-dibuajdas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restaurar-32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurar-32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_launcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_launcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizar20x201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizar20x201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="256x256_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\256x256_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,13 +181,13 @@
   <data name="cerrar32x32Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar32x32Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bodegaNegro20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bodegaNegro20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aceptarinicio 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aceptarinicio 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="archivoNegroRe20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivoNegroRe20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizar20x201" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizar20x201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregarpque32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarpque32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

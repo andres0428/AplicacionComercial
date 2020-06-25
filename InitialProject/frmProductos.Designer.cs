@@ -719,8 +719,8 @@
             this.eliminarBarraButton.Enabled = false;
             this.eliminarBarraButton.FlatAppearance.BorderSize = 0;
             this.eliminarBarraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eliminarBarraButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminarBarraButton.Image")));
-            this.eliminarBarraButton.Location = new System.Drawing.Point(243, 21);
+            this.eliminarBarraButton.Image = global::InitialProject.Properties.Resources._32x32cerrar;
+            this.eliminarBarraButton.Location = new System.Drawing.Point(242, 19);
             this.eliminarBarraButton.Name = "eliminarBarraButton";
             this.eliminarBarraButton.Size = new System.Drawing.Size(40, 40);
             this.eliminarBarraButton.TabIndex = 4;
@@ -732,12 +732,13 @@
             this.agregarBarraButton.Enabled = false;
             this.agregarBarraButton.FlatAppearance.BorderSize = 0;
             this.agregarBarraButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregarBarraButton.Image = ((System.Drawing.Image)(resources.GetObject("agregarBarraButton.Image")));
+            this.agregarBarraButton.Image = global::InitialProject.Properties.Resources.aceptarinicio_32x32;
             this.agregarBarraButton.Location = new System.Drawing.Point(196, 19);
             this.agregarBarraButton.Name = "agregarBarraButton";
             this.agregarBarraButton.Size = new System.Drawing.Size(40, 40);
             this.agregarBarraButton.TabIndex = 3;
             this.agregarBarraButton.UseVisualStyleBackColor = true;
+            this.agregarBarraButton.Click += new System.EventHandler(this.agregarBarraButton_Click);
             // 
             // barraTextBox
             // 
@@ -816,7 +817,7 @@
             this.agregarBodegaButton.Enabled = false;
             this.agregarBodegaButton.FlatAppearance.BorderSize = 0;
             this.agregarBodegaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregarBodegaButton.Image = ((System.Drawing.Image)(resources.GetObject("agregarBodegaButton.Image")));
+            this.agregarBodegaButton.Image = global::InitialProject.Properties.Resources.aceptarinicio_32x32;
             this.agregarBodegaButton.Location = new System.Drawing.Point(655, 21);
             this.agregarBodegaButton.Name = "agregarBodegaButton";
             this.agregarBodegaButton.Size = new System.Drawing.Size(40, 40);
