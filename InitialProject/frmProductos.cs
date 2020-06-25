@@ -18,10 +18,11 @@ namespace InitialProject
             InitializeComponent();
         }
 
-      
 
+
+        #region EventoLoadFrm
         private void frmProductos_Load(object sender, EventArgs e)
-        {          
+        {
             // TODO: This line of code loads data into the 'dSAll.Medida' table. You can move, or remove it, as needed.
             this.medidaTableAdapter.Fill(this.dSAll.Medida);
             // TODO: This line of code loads data into the 'dSAll.IVA' table. You can move, or remove it, as needed.
@@ -32,11 +33,12 @@ namespace InitialProject
             this.productoTableAdapter.Fill(this.dSAll.Producto);
 
             // TODO: This line of code loads data into the 'dSAll.Barra' table. You can move, or remove it, as needed.            
-           
+
 
             llenarGrillas();
             cargarImagen();
-        }
+        } 
+        #endregion
 
         #region LlenarGrillas
         private void llenarGrillas()
@@ -70,8 +72,7 @@ namespace InitialProject
             llenarGrillas();
             cargarImagen();
         }
-        #endregion
-       
+        #endregion      
 
         #region EditAddDeleteSave
         private void editItemBindingNavigator_Click(object sender, EventArgs e)
@@ -274,10 +275,30 @@ namespace InitialProject
         }
         #endregion
 
+        #region BarraAndBodega
         private void agregarBarraButton_Click(object sender, EventArgs e)
         {
             frmBarras frm = new frmBarras();
             frm.ShowDialog();
+            if (frm.IdBarra == 0) return;
+            CADBarra.xInsertBarra(Convert.ToInt32(iDProductoTextBox.Text), frm.IdBarra);
+            //refresca barra, metodo creado en llenar grilla
+            this.barraTableAdapter.FillBy(this.dSAll.Barra, Convert.ToInt32(iDProductoTextBox.Text));
         }
+
+        private void eliminarBarraButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro de eliminar la barra", "Seguro", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            long barra = (long)barraDataGridView.Rows[productoBindingSource.Position].Cells[1].Value;
+            CADBarra.DeleteBarra(barra);
+            //refresca barra, metodo creado en llenar grilla
+            this.barraTableAdapter.FillBy(this.dSAll.Barra, Convert.ToInt32(iDProductoTextBox.Text));
+        }
+
+        private void agregarBodegaButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
