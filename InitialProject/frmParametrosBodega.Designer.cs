@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParametrosBodega));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,18 +36,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.bodegaBomboBox = new System.Windows.Forms.ComboBox();
+            this.stockTextBox = new System.Windows.Forms.TextBox();
+            this.minimoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.diasReposicionNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.maximoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.cantidadMinimaNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.cancelarButton = new System.Windows.Forms.Button();
             this.aceptarButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.dSAll = new InitialProject.DSAll.DSAll();
+            this.bodegaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bodegaTableAdapter = new InitialProject.DSAll.DSAllTableAdapters.BodegaTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.minimoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diasReposicionNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidadMinimaNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,73 +111,113 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Cantidad Mínima:";
             // 
-            // comboBox1
+            // bodegaBomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(114, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
+            this.bodegaBomboBox.DataSource = this.bodegaBindingSource;
+            this.bodegaBomboBox.DisplayMember = "Descripcion";
+            this.bodegaBomboBox.FormattingEnabled = true;
+            this.bodegaBomboBox.Location = new System.Drawing.Point(114, 18);
+            this.bodegaBomboBox.Name = "bodegaBomboBox";
+            this.bodegaBomboBox.Size = new System.Drawing.Size(121, 21);
+            this.bodegaBomboBox.TabIndex = 6;
+            this.bodegaBomboBox.ValueMember = "IDBodega";
+            this.bodegaBomboBox.SelectedIndexChanged += new System.EventHandler(this.bodegaBomboBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // stockTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(356, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 7;
+            this.stockTextBox.Location = new System.Drawing.Point(356, 19);
+            this.stockTextBox.Name = "stockTextBox";
+            this.stockTextBox.ReadOnly = true;
+            this.stockTextBox.Size = new System.Drawing.Size(120, 20);
+            this.stockTextBox.TabIndex = 7;
             // 
-            // numericUpDown1
+            // minimoNumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(115, 45);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.minimoNumericUpDown.Location = new System.Drawing.Point(115, 45);
+            this.minimoNumericUpDown.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            99999,
+            this.minimoNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.minimoNumericUpDown.Name = "minimoNumericUpDown";
+            this.minimoNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.minimoNumericUpDown.TabIndex = 8;
+            this.minimoNumericUpDown.Value = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             // 
-            // numericUpDown2
+            // diasReposicionNumericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(115, 71);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.diasReposicionNumericUpDown.Location = new System.Drawing.Point(115, 71);
+            this.diasReposicionNumericUpDown.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 9;
+            this.diasReposicionNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.diasReposicionNumericUpDown.Name = "diasReposicionNumericUpDown";
+            this.diasReposicionNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.diasReposicionNumericUpDown.TabIndex = 9;
+            this.diasReposicionNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown3
+            // maximoNumericUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(356, 45);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.maximoNumericUpDown.Location = new System.Drawing.Point(356, 45);
+            this.maximoNumericUpDown.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 10;
+            this.maximoNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.maximoNumericUpDown.Name = "maximoNumericUpDown";
+            this.maximoNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.maximoNumericUpDown.TabIndex = 10;
+            this.maximoNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown4
+            // cantidadMinimaNumericUpDown
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(356, 71);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.cantidadMinimaNumericUpDown.Location = new System.Drawing.Point(356, 71);
+            this.cantidadMinimaNumericUpDown.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown4.TabIndex = 11;
+            this.cantidadMinimaNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cantidadMinimaNumericUpDown.Name = "cantidadMinimaNumericUpDown";
+            this.cantidadMinimaNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.cantidadMinimaNumericUpDown.TabIndex = 11;
+            this.cantidadMinimaNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cancelarButton
             // 
@@ -197,6 +245,25 @@
             this.aceptarButton.TabIndex = 12;
             this.aceptarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.aceptarButton.UseVisualStyleBackColor = true;
+            this.aceptarButton.Click += new System.EventHandler(this.aceptarButton_Click);
+            // 
+            // dSAll
+            // 
+            this.dSAll.DataSetName = "DSAll";
+            this.dSAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bodegaBindingSource
+            // 
+            this.bodegaBindingSource.DataMember = "Bodega";
+            this.bodegaBindingSource.DataSource = this.dSAll;
+            // 
+            // bodegaTableAdapter
+            // 
+            this.bodegaTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmParametrosBodega
             // 
@@ -207,12 +274,12 @@
             this.ClientSize = new System.Drawing.Size(496, 182);
             this.Controls.Add(this.cancelarButton);
             this.Controls.Add(this.aceptarButton);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cantidadMinimaNumericUpDown);
+            this.Controls.Add(this.maximoNumericUpDown);
+            this.Controls.Add(this.diasReposicionNumericUpDown);
+            this.Controls.Add(this.minimoNumericUpDown);
+            this.Controls.Add(this.stockTextBox);
+            this.Controls.Add(this.bodegaBomboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -226,10 +293,14 @@
             this.Name = "frmParametrosBodega";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmParametrosBodega";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.Load += new System.EventHandler(this.frmParametrosBodega_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.minimoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diasReposicionNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidadMinimaNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,13 +314,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.ComboBox bodegaBomboBox;
+        private System.Windows.Forms.TextBox stockTextBox;
+        private System.Windows.Forms.NumericUpDown minimoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown diasReposicionNumericUpDown;
+        private System.Windows.Forms.NumericUpDown maximoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown cantidadMinimaNumericUpDown;
         private System.Windows.Forms.Button cancelarButton;
         private System.Windows.Forms.Button aceptarButton;
+        private DSAll.DSAll dSAll;
+        private System.Windows.Forms.BindingSource bodegaBindingSource;
+        private DSAll.DSAllTableAdapters.BodegaTableAdapter bodegaTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

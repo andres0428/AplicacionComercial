@@ -297,7 +297,10 @@ namespace InitialProject
 
         private void agregarBodegaButton_Click(object sender, EventArgs e)
         {
-
+            frmParametrosBodega frm = new frmParametrosBodega();
+            frm.IdProducto = Convert.ToInt32(iDProductoTextBox.Text);
+            frm.ShowDialog();
+            this.bodegaProductoTableAdapter.FillBy(this.dSAll.BodegaProducto, Convert.ToInt32(iDProductoTextBox.Text));
         }
         #endregion
     }
